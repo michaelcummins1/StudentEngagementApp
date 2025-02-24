@@ -13,10 +13,20 @@ Our stakeholder groups include the office of student engagement and presidents, 
 
 ### About Us
 #### Russell Abraham
-#### Michael Cummins 
-#### Devin Franchino 
+- **Current Role:** Code Lead
+- I have made programs in Java, Python, and C++. I have made a simple platformer video game in Godot.
+#### Michael Cummins
+- **Current Role:** Scrum Lead
+- I have created a mobile app using Android studio, and I have some experience using Firebase. I also have developed many projects in Java, Python, C++, Javascript, and Kotlin and have utilized github as a means of saving and collaborating on said projects.
+#### Devin Franchino
+- **Current Role:** Document Lead
+- I have made programs in Javascript (Discord bot, AppsScript calculators), Zenscript (Crafttweaker work) and Java (OCR tool). I have an associate’s degree in Computer Science from MCCC.
 #### Tyler Houser
+- **Current Role:** Project Lead
+- I have made programs in Java, Python, C, C++, scheme, and verilog. I have made a 3D maze video game in unreal engine 5. 
 #### Jaheim Oates
+- **Current Role:** Efficiency Lead
+-  I have made programs in Java, python, C++, C and scheme. I made a calendar using C. 
 
 ### What we plan to learn
 - How to create an app that can function on both Android and iOS smartphones.
