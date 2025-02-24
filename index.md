@@ -35,3 +35,34 @@ This app’s merit lies primarily in the combination of multiple successful conc
 
 ### Broader Impacts:
 A localized, controlled, digital newsboard with designated senders and receivers could prove to be extremely useful for communities outside of Ursinus College. Other colleges and universities, as well as all levels of education, could definitely find use for an application of a similar manner. Furthermore, organizations, local communities, and even the generalized population could find extreme value in a ‘social media’ style app that only provides controlled, filtered information and notifications. 
+
+## Press Release:
+### URSINUS STUDENTS ANSWER THE CALL TO DEVELOP STUDENT-COMMUNITY APP
+
+Are you tired of a cluttered, unorganized email inbox? Do you ever miss fun or important campus activities because their flyers were hidden in your Outlook? Are you looking for an easier way to stay up to date with the clubs and campus activities that matter to you?
+
+Students Russell Abraham, Michael Cummins, Devin Franchino, Tyler Houser, and Jaheim Oates, from Professor William Mongan's CS375 class, have formed a development team known as the **Motour Mathematicians** with the goal to develop an app that the campus's Student Engagement faculty have been clamoring for. The yet-to-be-named application is being pitched as a mobile "news board" for community events; end users would be able to personalize news feeds and notifications from community managers so that they stay up to date on all of the extracurricular events happening on campus. The developers claim this app will help students be more in touch with the events and groups on campus they care about and eliminate the clutter that the current system's mailing lists create for students.
+
+### FAQ
+**Question:**
+Can students post on the app?
+
+**Answer:**
+No, only organizations and clubs approved by the administrators of the app are allowed to post.
+
+**Question:**
+Will the app just become cluttered with all the clubs just like my email?
+
+**Answer:**
+No, there will be a general campus feed with all the clubs, but you will also be able to filter and cultivate a ‘following’ tab filled with only the clubs and organizations that matter to you.
+
+**Question:**
+How much freedom will the posters have?
+
+**Answer:**
+Posts can include text, images, or videos and posters will also have the functionality of determining whether or not they want to post to the whole campus or only their followers, as well as deciding what the notification will look like for the users.
+
+**Question:**
+Will users be able to chat with other users?
+**Answer:**
+The end goal is that users will be able to chat with other users within the same ‘following’ umbrella, which could be useful for classes or clubs, and also have the capability of commenting on posts. Students will be able to directly message their teachers, making communication much easier.
