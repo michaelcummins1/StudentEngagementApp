@@ -30,6 +30,9 @@ A basic newsboard app that can notify students of events on campus, and allows s
 ### Aspirant Scope:
 Users can directly message other users within the same groups as them (i.e. clubs, classes, organizations) and can comment on posts. This would require filters for obscene language and bullying/hateful remarks. Another potential route for the project would be to have access to students schedules and automatically create groups for each class they are a part of; the students would then have means to contact their professors and other students within their class, adding academic assistance to the app’s functionalities. Professors would then be able to use the app as a way of sending messages directly to the students in a more reliable manner than outlook, functioning similarly to how the CS department at Ursinus uses Discord. 
 
+### Timeline:
+TO DO: LINK ROADMAP
+
 ### Intellectual Merit:
 This app’s merit lies primarily in the combination of multiple successful concepts in order to solve a common problem in the Ursinus community. The app will not only declutter the emails of Ursinus students, but will also function as a customizable, controlled newsboard featuring only meaningful, informative posts. This takes the customizable, user-centered aspects of social media apps and solves their problem of unregulated misinformation and clutter by controlling who can be designated as a poster or user. This app will allow for much better organization and communication between administration, student engagement, and the general student population at Ursinus, creating a better campus community.
 
