@@ -1,6 +1,8 @@
 # Student Engagement App
 Created by: Russell Abraham, Michael Cummins, Devin Franchino, Tyler Houser, Jaheim Oates
 
+## [Design Report](https://michaelcummins1.github.io/StudentEngagementApp/design-report)
+
 ## Project Proposal
 ### Description:
 We will create an app to replace the need for organizations on campus to use the Outlook email app to reach the students of Ursinus College. The app will function as a general newsboard for the campus, allowing organizations to send notifications to the Ursinus Community about events or activities. Users will be able to filter their feed from the general campus community to organizations they are interested in or are a part of. This app will allow for better real-time notifications of students for time pressing events, to ensure that the students do not miss any opportunities on campus. The app can be treated as a local, controlled newsboard with customization options for students as well as giving student engagement and other similar organizations the ability to reliably contact every student on campus.
