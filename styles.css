@@ -18,8 +18,9 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    font-size: 0.9em; /* Set a fixed font size */
-    padding: 15px 0; /* Vertical padding for breathing room */
+    font-size: clamp(0.5em, 90%, 3em); /* Set a fixed font size */
+    padding-top: 15px; /* Vertical padding for breathing room */
+    padding-bottom: 10px;
     height: 60px; /* Fixed height for the header */
     line-height: 1.2; /* Ensures text is vertically aligned */
     overflow: hidden; /* Prevents overflow */
