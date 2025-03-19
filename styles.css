@@ -1,0 +1,72 @@
+body {
+    background-color: black;  /* Black Background */
+    color: #FFFFFF;  /* White text */
+    font-family: Arial, sans-serif;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+}
+
+/* HEADER */
+header {
+    color: #97002E;  /* Ursinus Red headings */
+    width: 100%;  /* Ensures full width */
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 0.9em; /* Set a fixed font size */
+    padding: 15px 0; /* Vertical padding for breathing room */
+    height: 60px; /* Fixed height for the header */
+    line-height: 1.2; /* Ensures text is vertically aligned */
+    overflow: hidden; /* Prevents overflow */
+    word-wrap: break-word; /* Ensures text doesn't break off-screen */
+    z-index: 10; /* Keeps header on top */
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* SCROLLABLE CONTENT */
+.scroll-container {
+    width: 90%;
+    max-width: 400px;
+    flex: 1; /* Let it grow to fill the space */
+    overflow-y: auto; /* Enables scrolling */
+    background: black;
+    padding: 10px;
+    border-radius: 8px;
+
+    /* Ensure it starts below the header */
+    position: absolute;
+    top: 80px; /* The height of the fixed header */
+    bottom: 70px; /* Above footer */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* BUTTONS */
+button {
+    background-color: #97002E;  /* Ursinus Red buttons */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #750020; /* Darker red for hover */
+}
