@@ -13,23 +13,15 @@
         <h1>Student Engagement App</h1>
     </header>
 
-    <!-- Scrollable Content -->
-    <main class="scroll-container">
-        <div class="post"><h3>Post 1</h3><p>This is the first post.</p></div>
-        <div class="post"><h3>Post 2</h3><p>This is the second post.</p></div>
-        <div class="post"><h3>Post 3</h3><p>This is the third post.</p></div>
-        <div class="post"><h3>Post 4</h3><p>This is the fourth post.</p></div>
-        <div class="post"><h3>Post 5</h3><p>This is the fifth post.</p></div>
-        <div class="post"><h3>Post 5</h3><p>This is the fifth post.</p></div>
-        <div class="post"><h3>Post 5</h3><p>This is the fifth post.</p></div>
-        <div class="post"><h3>Post 5</h3><p>This is the fifth post.</p></div>
-        <div class="post"><h3>Post 5</h3><p>This is the fifth post.</p></div>
-        <div class="post"><h3>Post 5</h3><p>This is the fifth post.</p></div>
-        <div class="post"><h3>Post 5</h3><p>This is the fifth post.</p></div>
-        <div class="post"><h3>Post 5</h3><p>This is the fifth post.</p></div>
-        <div class="post"><h3>Post 5</h3><p>This is the fifth post.</p></div>
-        <div class="post"><h3>Post 5</h3><p>This is the fifth post.</p></div>
+    <!-- Buttons to switch between views -->
+    <div class="toggle-buttons">
+        <button class="active" id="mainBtn" onclick="showMain()">Main</button>
+        <button id="followingBtn" onclick="showFollowing()">Following</button>
+    </div>
 
+    <!-- Scrollable Content -->
+    <main class="scroll-container" id="scrollView">
+        <!-- Dynamically Loaded Content -->
     </main>
 
     <!-- Footer -->
@@ -37,5 +29,6 @@
         <p>Footer Goes Here</p>
     </footer>
 
+    <script src="mainscript.js"></script> <!-- External JavaScript file -->
 </body>
 </html>

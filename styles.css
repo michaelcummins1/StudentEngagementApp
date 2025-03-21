@@ -21,7 +21,8 @@ header {
     font-size: clamp(0.5em, 90%, 3em); /* Set a fixed font size */
     padding-top: 15px; /* Vertical padding for breathing room */
     padding-bottom: 10px;
-    height: 60px; /* Fixed height for the header */
+    min-height: 60px; /* Fixed height for the header */
+    max-height: 15vh;
     line-height: 1.2; /* Ensures text is vertically aligned */
     overflow: hidden; /* Prevents overflow */
     word-wrap: break-word; /* Ensures text doesn't break off-screen */
@@ -38,6 +39,40 @@ footer {
     left: 0;
 }
 
+/* BUTTONS CONTAINER */
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px; /* Space below the header */
+    position: fixed;
+    width: 100%;
+    top: calc(10% + 10px);
+    background: black;
+    padding: 10px 0;
+    z-index: 9; /* Ensure it's above scroll view */
+}
+
+/* Style for buttons */
+.toggle-buttons button {
+    background-color: #97002E;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.75em;
+    width: auto;
+    min-width: 50px;
+}
+
+.toggle-buttons button:hover, button.active {
+    background-color: black;
+    color: #97002E;
+    border:1px solid #97002E;
+}
+
+
 /* SCROLLABLE CONTENT */
 .scroll-container {
     width: 90%;
@@ -50,7 +85,7 @@ footer {
 
     /* Ensure it starts below the header */
     position: absolute;
-    top: 80px; /* The height of the fixed header */
+    top: calc(15% + 10px); /* The height of the fixed header */
     bottom: 70px; /* Above footer */
     left: 50%;
     transform: translateX(-50%);
