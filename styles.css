@@ -66,7 +66,7 @@ footer {
     min-width: 50px;
 }
 
-.toggle-buttons button:hover, button.active {
+.toggle-buttons button.active {
     background-color: black;
     color: #97002E;
     border:1px solid #97002E;
