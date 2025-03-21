@@ -23,7 +23,7 @@ header {
 }
 
 #ursinusLogo {
-    width: 35px;  /* Adjust width */
+    width: 45px;  /* Adjust width */
     height: auto;  /* Automatically adjust height to maintain aspect ratio */
     object-fit: contain; /* Ensures the image is not distorted */
     margin-top: 5px; /* Adjust if needed */
@@ -84,7 +84,7 @@ footer {
 
     /* Ensure it starts below the header */
     position: absolute;
-    top: calc(15% + 10px); /* The height of the fixed header */
+    top: calc(15% + 15px); /* The height of the fixed header */
     bottom: 70px; /* Above footer */
     left: 50%;
     transform: translateX(-50%);
