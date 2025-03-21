@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const followingBtn = document.getElementById("followingBtn");
     const scrollView = document.getElementById("scrollView");
 
+    const homePgBtn = document.getElementById("homePgBtn");
+    const createPstBtn = document.getElementById("createPstBtn");
+    const fllwLstBtn = document.getElementById("fllwLstBtn");
+
     // Function to switch scroll views between main and following
     function switchView(targetBtn, content) {
         // Remove active class from both buttons
@@ -52,12 +56,25 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollView.innerHTML = content;
     }
 
+    function switchScreen(targetBtn){
+        homePgBtn.classList.remove("active");
+        createPstBtn.classList.remove("active");
+        fllwLstBtn.classList.remove("active");
+
+        targetBtn.classList.add("active");
+    }
+
     // Load default content on page load
     switchView(mainBtn, mainContent);
+
 
     // Event Listeners for buttons
     mainBtn.addEventListener("click", () => switchView(mainBtn, mainContent));
     followingBtn.addEventListener("click", () => switchView(followingBtn, followingContent));
+
+    homePgBtn.addEventListener("click", () => switchScreen(homePgBtn));
+    createPstBtn.addEventListener("click", () => switchScreen(createPstBtn));
+    fllwLstBtn.addEventListener("click", () => switchScreen(fllwLstBtn));
 })
 
 

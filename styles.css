@@ -31,12 +31,35 @@ header {
 
 /* FOOTER */
 footer {
-    width: 100%;
-    text-align: center;
+    width: 90%;  /* Adjust width as needed */
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    padding-left: 10px;
+    padding-left: 10px;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-evenly; /* Ensures equal spacing */
+    gap: 20px;
+}
+
+/* Footer Buttons */
+footer button {
+    background-color: #97002E;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.75em;
+    flex: 1;  /* Make all buttons equal width */
+    max-width: 70px; /* Prevents excessive stretching */
+    text-align: center;
+}
+
+footer button.active {
+    background-color: black;
+    color: #97002E;
+    border:1px solid #97002E;
 }
 
 /* BUTTONS CONTAINER */
