@@ -17,7 +17,7 @@ header {
     position: fixed;
     top: 0;
     padding: 10px;
-    height: 40px; /* Fixed height for the header */
+    height: 65px; /* Fixed height for the header */
     line-height: 1.2; /* Ensures text is vertically aligned */
     z-index: 10; /* Keeps header on top */
 }
@@ -70,7 +70,7 @@ footer button.active {
     margin-top: 5px; /* Space below the header */
     position: absolute; /* Absolute positioning */
     width: 50%; /* Set the width of the button container */
-    top: calc(10% + 10px); /* Position from the top */
+    top: calc(7.5% + 10px); /* Position from the top */
     left: 25%; /* Position it 25% from the left of the screen */
     z-index: 9; /* Ensure it's above scroll view */
 }
@@ -107,7 +107,7 @@ footer button.active {
 
     /* Ensure it starts below the header */
     position: absolute;
-    top: calc(15% + 15px); /* The height of the fixed header */
+    top: calc(12% + 15px); /* The height of the fixed header */
     bottom: 70px; /* Above footer */
     left: 50%;
     transform: translateX(-50%);
