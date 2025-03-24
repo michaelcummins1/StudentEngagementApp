@@ -1,0 +1,12 @@
+{
+    "Posts": [
+        {
+            "postID": 1,
+            "accountID": 1,
+            "postDate": "Date",
+            "Title": "Text",
+            "postText": "LoremIpsumDolorSitAmet.",
+            "postImg": "direction"
+        }
+    ]
+}
