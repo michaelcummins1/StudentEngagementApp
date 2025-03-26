@@ -128,3 +128,35 @@ button {
 button:hover {
     background-color: #750020; /* Darker red for hover */
 }
+
+.followed-user {
+    background: #222;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.followed-user h3 {
+    margin: 0;
+    color: #fff;
+}
+
+.followed-user p {
+    margin: 5px 0 0;
+    color: #bbb;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
