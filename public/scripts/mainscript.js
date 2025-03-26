@@ -71,9 +71,8 @@ const followingContent = `
 
         homePgBtn.addEventListener("click", () => switchScreen(homePgBtn));
         createPstBtn.addEventListener("click", () => switchScreen(createPstBtn));
-        fllwLstBtn.addEventListener("click", () => switchScreen(fllwLstBtn));
+        fllwLstBtn.addEventListener("click", () => {
+            window.location.href = "/pages/followinglist.html";
+        });
+        
     })
-
-
-
-}
