@@ -73,7 +73,3 @@ const followingContent = `
         createPstBtn.addEventListener("click", () => switchScreen(createPstBtn));
         fllwLstBtn.addEventListener("click", () => switchScreen(fllwLstBtn));
     })
-
-
-
-}

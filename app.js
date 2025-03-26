@@ -8,7 +8,7 @@ const port = 443;
 
 //app.get is an HTTPGET request https://expressjs.com/en/starter/basic-routing.html
 app.get('/', (req, res) => {
-    res.send('HelloWorld.');
+    res.send('To get to mainpage type \'/pages/mainpage.html\'');
 })
 
 app.listen(port, () => {
