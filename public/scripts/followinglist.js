@@ -2,7 +2,9 @@
 
     document.addEventListener("DOMContentLoaded", function () {
         const followingListContainer = document.getElementById("followingListContainer");
-        const backBtn = document.getElementById("backBtn");
+        const homePgBtn = document.getElementById("homePgBtn");
+        const createPstBtn = document.getElementById("createPstBtn");
+        const fllwLstBtn = document.getElementById("fllwLstBtn");
 
         // Testing/Example users
         const followedUsers = [
@@ -38,7 +40,7 @@
         }
 
         // Back button event listener
-        backBtn.addEventListener("click", function () {
+        homePgBtn.addEventListener("click", function () {
             window.location.href = "/pages/mainpage.html";
         });
 
