@@ -1,7 +1,7 @@
 body {
     background-color: black;  /* Black Background */
     color: #FFFFFF;  /* White text */
-    font-family: Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-items: center;
     margin: 0;
     padding: 0;
