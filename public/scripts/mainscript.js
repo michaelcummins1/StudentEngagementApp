@@ -1,3 +1,7 @@
+
+import {Post, generateRandomPosts} from './post.js';
+
+
 // Sample content for "Main" and "Following" views
 const mainContent = `
     <div class="post"><h3>Main Post</h3><p>This is a main post.</p></div>
@@ -41,7 +45,7 @@ const followingContent = `
         const fllwLstBtn = document.getElementById("fllwLstBtn");
 
         // Function to switch scroll views between main and following
-        function switchView(targetBtn, content) {
+        function switchView(targetBtn, list) {
             // Remove active class from both buttons
             mainBtn.classList.remove("active");
             followingBtn.classList.remove("active");
@@ -50,7 +54,16 @@ const followingContent = `
             targetBtn.classList.add("active");
 
             // Change content in scrollView
-            scrollView.innerHTML = content;
+            scrollView.innerHTML = list.map(post => `
+                <div class="post">
+                    <div class="post-info">
+                        <h3>${post.user_id}</h3>
+                        <h3>${post.title}</h3>
+                        <p>${post.text}</p>
+                    </div>
+                </div>
+            `).join("");
+
         }
 
         function switchScreen(targetBtn) {
@@ -61,18 +74,37 @@ const followingContent = `
             targetBtn.classList.add("active");
         }
 
-        // Load default content on page load
-        switchView(mainBtn, mainContent);
 
+        // Begin generation/testing of filtering between posts
+        let postList = generateRandomPosts(25);
+
+        // Example of list of users that the current user follows
+        let followingList = [];
+        for(let i = 0; i < 25; i++){
+            if(i % 2 == 0){
+                followingList.push(i)
+            }
+        }
+
+        // Filters all posts in postList to a few posts and returns followingPostList
+        function filterPosts(postList, followingList) {
+            return postList.filter(post => followingList.includes(post.user_id));
+        }
+        
+        let followingPostList = filterPosts(postList, followingList)
 
         // Event Listeners for buttons
-        mainBtn.addEventListener("click", () => switchView(mainBtn, mainContent));
-        followingBtn.addEventListener("click", () => switchView(followingBtn, followingContent));
+        mainBtn.addEventListener("click", () => switchView(mainBtn, postList));
+        followingBtn.addEventListener("click", () => switchView(followingBtn, followingPostList));
 
         homePgBtn.addEventListener("click", () => switchScreen(homePgBtn));
         createPstBtn.addEventListener("click", () => switchScreen(createPstBtn));
         fllwLstBtn.addEventListener("click", () => {
             window.location.href = "/pages/followinglist.html";
         });
+
+        // Load default content on page load
+        switchView(mainBtn, postList);
+
         
     })
