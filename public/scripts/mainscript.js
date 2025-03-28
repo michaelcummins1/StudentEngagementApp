@@ -2,7 +2,6 @@
 import {Post, generateRandomPosts} from './post.js';
 
 // Listener for the page upon load
-
     document.addEventListener("DOMContentLoaded", function () {
         const mainBtn = document.getElementById("mainBtn");
         const followingBtn = document.getElementById("followingBtn");
@@ -14,6 +13,7 @@ import {Post, generateRandomPosts} from './post.js';
 
         // Function to switch scroll views between main and following
         function switchView(targetBtn, list) {
+
             // Remove active class from both buttons
             mainBtn.classList.remove("active");
             followingBtn.classList.remove("active");
@@ -34,6 +34,7 @@ import {Post, generateRandomPosts} from './post.js';
 
         }
 
+        // Function to change between multiple screens
         function switchScreen(targetBtn) {
             homePgBtn.classList.remove("active");
             createPstBtn.classList.remove("active");
