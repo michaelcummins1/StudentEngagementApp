@@ -9,6 +9,7 @@ text -> the text of the post (designated by the user input) *REQUIRED*
 image -> the image located within the post (designated by the user input) *NOT REQUIRED*
 video -> the video located within the post (designated by the user input) *NOT REQUIRED*
 link -> the link located within the post (designated by the user input) *NOT REQUIRED*
+deleted -> whether or not the post has been deleted (true/false)
 _______________________________________________________________________________________
 Example usage:
 

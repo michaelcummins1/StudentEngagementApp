@@ -144,36 +144,66 @@ button:hover {
     background-color: #750020; /* Darker red for hover */
 }
 
+#searchInput {
+    width: 80%;  /* Makes it smaller than full width */
+    max-width: 400px;  /* Prevents it from becoming too wide */
+    display: block;
+    margin: 10px auto;  /* Centers it horizontally */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #222;
+    border-radius: 8px;  /* Rounded edges */
+    margin-bottom: 12px;
+    background-color: #333;  /* Gray background */
+    color: white;  /* White text */
+    outline: none;
+}
+
+#followingList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 .followed-user {
-    background: #222;
+    border: 1px solid #222;
+    background-color: #222;
+    margin-top: 8px;  /* Adds spacing between users */
+    padding: 12px;
+    font-size: 18px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    border-radius: 15px;  /* Slightly rounded boxes */
 }
 
-.followed-user h3 {
-    margin: 0;
-    color: #fff;
+.followed-user a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 100%;
 }
 
-.followed-user p {
-    margin: 5px 0 0;
-    color: #bbb;
+.followed-user:hover {
+    background-color: #111;
 }
 
 .profile-pic {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    object-fit: cover;
+    margin-right: 10px;
 }
 
-.user-info {
-    display: flex;
-    flex-direction: column;
+.user-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
 }
 
 /* POST CREATION */
