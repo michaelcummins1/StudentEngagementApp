@@ -8,9 +8,12 @@ import {Post, generateRandomPosts} from './post.js';
         const followingBtn = document.getElementById("followingBtn");
         const scrollView = document.getElementById("scrollView");
 
-    const homePgBtn = document.getElementById("homePgBtn");
-    const createPstBtn = document.getElementById("createPstBtn");
-    const fllwLstBtn = document.getElementById("fllwLstBtn");
+        const homePgBtn = document.getElementById("homePgBtn");
+        const createPstBtn = document.getElementById("createPstBtn");
+        const fllwLstBtn = document.getElementById("fllwLstBtn");
+
+        const settBtn = document.getElementById("settingsButton");
+        const acctBtn = document.getElementById("acctButton");
 
         // Function to switch scroll views between main and following
         function switchView(targetBtn, list) {
@@ -67,13 +70,18 @@ import {Post, generateRandomPosts} from './post.js';
 
     homePgBtn.addEventListener("click", () => {
         window.location.href = "/pages/mainpage.html"
-
     });
     createPstBtn.addEventListener("click", () => {
         window.location.href = "/pages/postcreation.html"
     });
     fllwLstBtn.addEventListener("click", () => {
         window.location.href = "/pages/followinglist.html";
+    });
+    settBtn.addEventListener("click", () => {
+        window.location.href = "/pages/settings.html"
+    });
+    acctBtn.addEventListener("click", () => {
+        window.location.href = "/pages/createdposts.html"
     });
 
     // Load default content on page load

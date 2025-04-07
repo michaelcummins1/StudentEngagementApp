@@ -4,7 +4,7 @@ const app = express(); //express.js Module
 
 const path = require('path')
 
-const port = 443;
+const port = 3000;
 
 //app.get is an HTTPGET request https://expressjs.com/en/starter/basic-routing.html
 app.get('/', (req, res) => {

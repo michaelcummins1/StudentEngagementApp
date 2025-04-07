@@ -7,12 +7,7 @@
         const fllwLstBtn = document.getElementById("fllwLstBtn");
 
         // Search bar
-        const searchInput = document.createElement("input");
-        searchInput.type = "text";
-        searchInput.id = "searchInput";
-        searchInput.placeholder = "Search...";
-        searchInput.addEventListener("keyup", filterList);
-        followingListContainer.appendChild(searchInput);
+        const searchBar = document.getElementById("searchBar")
 
         // Testing/Example users
         const followedUsers = [
