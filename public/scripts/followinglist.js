@@ -43,6 +43,12 @@
         homePgBtn.addEventListener("click", function () {
             window.location.href = "/pages/mainpage.html";
         });
+        createPstBtn.addEventListener("click", () => {
+            window.location.href = "/pages/postcreation.html"
+        });
+        fllwLstBtn.addEventListener("click", () => {
+            window.location.href = "/pages/followinglist.html";
+        });
 
         // Initial rendering of followed users
         renderFollowingList();

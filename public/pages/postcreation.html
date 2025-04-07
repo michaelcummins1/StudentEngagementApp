@@ -1,13 +1,46 @@
-<!--Post creation page accessed from main page-->
+<!--Page to create posts (Only posters)-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Creation Page</title>
-    <link rel="stylesheet" href="styles/styles.css">  <!-- External CSS -->
+    <title>Create Post</title>
+    <link rel="stylesheet" href="/styles/styles.css">  <!-- External CSS -->
 </head>
 <body>
 
+    <header>
+        <img src="/assets/images/uc-crest.png" alt="Ursinus Logo" id="ursinusLogo">
+    </header>
+
+    <main class="post-creation-container">
+        <h2>Create a New Post</h2>
+
+        <form id="postForm">
+            <label for="postTitle">Title</label>
+            <input type="text" id="postTitle" name="postTitle" placeholder="Enter post title" required>
+
+            <label for="postBody">Body</label>
+            <textarea id="postBody" name="postBody" rows="5" placeholder="Write your post..." required></textarea>
+
+            <label for="postImage">Image Upload</label>
+            <input type="file" id="postImage" name="postImage" accept="image/*">
+
+            <label for="postVideo">Video Upload</label>
+            <input type="file" id="postVideo" name="postVideo" accept="video/*">
+
+            <label for="postLink">External Link</label>
+            <input type="url" id="postLink" name="postLink" placeholder="https://example.com">
+
+            <button type="submit">Submit Post</button>
+        </form>
+    </main>
+    <footer>
+        <button class="active" id="homePgBtn">Home Page</button>
+        <button id="createPstBtn">Create Post</button>
+        <button id="fllwLstBtn">Following List</button>
+    </footer>
+
+    <script type="module" src="/scripts/postcreation.js"></script> <!-- External JavaScript file -->
 </body>
 </html>
