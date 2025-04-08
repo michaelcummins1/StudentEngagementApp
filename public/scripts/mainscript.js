@@ -3,23 +3,23 @@ import {Post, generateRandomPosts} from './post.js';
 
 // Listener for the page upon load
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const mainBtn = document.getElementById("mainBtn");
-        const followingBtn = document.getElementById("followingBtn");
-        const scrollView = document.getElementById("scrollView");
+document.addEventListener("DOMContentLoaded", function () {
+    const mainBtn = document.getElementById("mainBtn");
+    const followingBtn = document.getElementById("followingBtn");
+    const scrollView = document.getElementById("scrollView");
 
-        const homePgBtn = document.getElementById("homePgBtn");
-        const createPstBtn = document.getElementById("createPstBtn");
-        const fllwLstBtn = document.getElementById("fllwLstBtn");
+    const homePgBtn = document.getElementById("homePgBtn");
+    const createPstBtn = document.getElementById("createPstBtn");
+    const fllwLstBtn = document.getElementById("fllwLstBtn");
 
-        const settBtn = document.getElementById("settingsButton");
-        const acctBtn = document.getElementById("acctButton");
+    const settBtn = document.getElementById("settingsButton");
+    const acctBtn = document.getElementById("acctButton");
 
-        // Function to switch scroll views between main and following
-        function switchView(targetBtn, list) {
-            // Remove active class from both buttons
-            mainBtn.classList.remove("active");
-            followingBtn.classList.remove("active");
+    // Function to switch scroll views between main and following
+    function switchView(targetBtn, list) {
+        // Remove active class from both buttons
+        mainBtn.classList.remove("active");
+        followingBtn.classList.remove("active");
 
         // Add active class to clicked button
         targetBtn.classList.add("active");
@@ -34,13 +34,12 @@ import {Post, generateRandomPosts} from './post.js';
                 </div>
             </div>
         `).join("");
-
     }
 
-        function switchScreen(targetBtn) {
-            homePgBtn.classList.remove("active");
-            createPstBtn.classList.remove("active");
-            fllwLstBtn.classList.remove("active");
+    function switchScreen(targetBtn) {
+        homePgBtn.classList.remove("active");
+        createPstBtn.classList.remove("active");
+        fllwLstBtn.classList.remove("active");
 
         targetBtn.classList.add("active");
     }
@@ -61,7 +60,7 @@ import {Post, generateRandomPosts} from './post.js';
     function filterPosts(postList, followingList) {
         return postList.filter(post => followingList.includes(post.user_id));
     }
-    
+
     let followingPostList = filterPosts(postList, followingList)
 
     // Event Listeners for buttons
