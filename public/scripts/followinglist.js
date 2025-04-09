@@ -25,7 +25,8 @@
         ];
 
         // Function to render the followed users list
-        function renderFollowingList() {
+        function renderFollowingList(usersToRender = followedUsers) {
+            followingListContainer.innerHTML = "";
             if (followedUsers.length === 0) {
                 followingListContainer.innerHTML = "<p>No followed accounts yet.</p>";
                 return;
@@ -36,7 +37,7 @@
             ul.id = "followingList";
 
             // Populate list items
-            ul.innerHTML = followedUsers.map(user => `
+            ul.innerHTML = usersToRender.map(user => `
                 <li class="followed-user">
                     <a href="#" class="user-link">
                         <img src="${user.profilePic}" alt="${user.fullName}" class="profile-pic">
@@ -53,20 +54,26 @@
 
         // Search filter function
         function filterList() {
-            const input = document.getElementById("searchInput").value.toUpperCase();
-            const ul = document.getElementById("followingList");
-            const li = ul.getElementsByTagName("li");
+            const query = searchBar.value.toLowerCase();
 
-            for (let i = 0; i < li.length; i++) {
-                const userName = li[i].getElementsByTagName("h3")[0].textContent.toUpperCase();
-                if (userName.indexOf(input) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
+            const filteredUsers = followedUsers.filter(user =>
+                user.username.toLowerCase().includes(query)
+            );
+
+            renderFollowingList(filteredUsers);
+            
         }
 
+        // Search input listener
+        searchBar.addEventListener("input", filterList);
+
+        const searchForm = document.querySelector(".search-Bar");
+        if (searchForm) {
+            searchForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+            });
+        }
+        
         // Back button event listener
         homePgBtn.addEventListener("click", function () {
             window.location.href = "/pages/mainpage.html";
