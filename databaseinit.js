@@ -13,7 +13,7 @@ db.exec(`
         deletedAccount BOOLEAN NOT NULL
     );`
 );
-//creating accounts Table
+//creating posts Table
 db.exec(`
     CREATE TABLE IF NOT EXISTS posts (
         postID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -41,3 +41,4 @@ db.exec(`
 );
 db.close();
 
+//prepared statement
