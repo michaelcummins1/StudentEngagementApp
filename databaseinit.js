@@ -10,7 +10,6 @@ db.exec(`
         creationDate DATE NOT NULL,
         postPerms BOOLEAN NOT NULL,
         adminPerms BOOLEAN NOT NULL,
-        postCount INT,
         deletedAccount BOOLEAN NOT NULL
     );`
 );

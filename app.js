@@ -1,9 +1,10 @@
 //Module Imports
 const express = require('express');
 const dotenv = require('dotenv').config();
-const path = require('path')
-
-const port = 3000;
+const path = require('path');
+//Static Fields
+const app = express(); //Server Instance
+const port = 3000; //Port
 
 //Functions
 function generateAccessToken(username) {
