@@ -4,6 +4,7 @@ const db = Database('studentAppDB.db');
 db.exec(`
     CREATE TABLE IF NOT EXISTS accounts(
         accountID INTEGER PRIMARY KEY AUTOINCREMENT,
+        password TEXT NOT NULL,
         email VARCHAR(255) NOT NULL,
         pfp SMALLBLOB,
         creationDate DATE NOT NULL,
