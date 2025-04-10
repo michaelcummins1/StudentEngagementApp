@@ -2,15 +2,8 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
 const path = require('path')
-const jwt = require('jsonwebtoken');
 
-
-
-
-//Static Fields
-const app = express();
-const port = 4430;
-const db = require('./db');
+const port = 3000;
 
 //Functions
 function generateAccessToken(username) {
