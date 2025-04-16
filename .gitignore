@@ -1,5 +1,5 @@
 # Ignore all files in the folder
 StudentEngagementApp/.vs/*
-
+.env
 # Except specific files you want to track
 !folder_name/important_file.txt.
