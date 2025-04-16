@@ -160,7 +160,7 @@ footer button.active .icon {
 
     /* Ensure it starts below the header */
     position: absolute;
-    top: calc(12% + 15px); /* The height of the fixed header */
+    top: calc(12% + 25px); /* The height of the fixed header */
     bottom: calc(7.5% + 15px); /* Above footer */
     left: 50%;
     transform: translateX(-50%);
