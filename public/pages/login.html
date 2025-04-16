@@ -7,7 +7,23 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="/styles/styles.css">  <!-- External CSS -->
 </head>
+    <!--Header (same as in post creation)-->
+<Header>
+    <img src="/assets/images/uc-crest.png" alt="Ursinus Logo" id="ursinusLogo">
+    </button>
+</Header>
 <body>
-
+    <main class="log-in-container">
+        <form id="logInSubmission">         
+            <label for="postTitle">Username</label>
+            <input type="text" id="email" name="email" placeholder="email" required>
+            <br>
+            <label for="password">Password</label>
+            <textarea id="password" name="password" rows="1" placeholder="Password" required></textarea>
+            <br> 
+            <button type="Log In">Log In</button> 
+        </form>
+        <button id="createAccount">Create Account</button>
+    </main>
 </body>
 </html>
