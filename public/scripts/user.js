@@ -12,13 +12,12 @@ deletedAccount -> whether or not the user's account is deleted
 _______________________________________________________________________________________
 Example usage:
 
-user = new User(1234, 5678, email@gmail.com, [1, 2, 3, 4], Date(2025, 11, 25, 0, 0, 0, 0), true, false,...);
+user = new User(1234, email@gmail.com, [1, 2, 3, 4], Date(2025, 11, 25, 0, 0, 0, 0), true, false,...);
 */
 
-export function User(id, email, pfp, following, creationDate, postPerms, adminPerms, postCount, deletedAccount){
+export function User(id, email, following, creationDate, postPerms, adminPerms, postCount, deletedAccount){
     this.id = id;
     this.email = email;
-    this.pfp = pfp;
     this.following = following;
     this.creationDate = creationDate;
     this.postPerms = postPerms;
