@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 node_modules/**/
+=======
+# Ignore all files in the folder
+StudentEngagementApp/.vs/*
+.env
+# Except specific files you want to track
+!folder_name/important_file.txt.
+>>>>>>> e50b263ed96be1e79336b7e06920408f7b1678b7
