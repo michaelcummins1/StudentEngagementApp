@@ -17,10 +17,11 @@ db.exec(`
 db.exec(`
     CREATE TABLE IF NOT EXISTS posts (
         postID INTEGER PRIMARY KEY AUTOINCREMENT,
-        accountID INT, 
-        postDate DATE NOT NULL,
+        accountID INT NOT NULL, 
+        postDate INTEGER NOT NULL,
         Title nvarchar(255) NOT NULL,
         postDescription nvarchar(3000),
+        link nvarchar(1000),
         image MEDIUMBLOB,
         video LARGEBLOB,
         FOREIGN KEY (accountID) REFERENCES accounts(accountID)

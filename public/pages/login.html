@@ -12,21 +12,21 @@
     <img src="/assets/images/uc-crest.png" alt="Ursinus Logo" id="ursinusLogo">
     </button>
 </Header>
+
 <body>
-    <main class="log-in-container">
+    <script type="module" src="/scripts/login.js"></script> <!-- External JavaScript file -->    
         <form id="logInSubmission">         
-            <label for="postTitle">Username</label>
-            <input type="text" id="email" name="email" placeholder="email" required>
-            <br>
-            <label for="password">Password</label>
-            <textarea id="password" name="password" rows="1" placeholder="Password" required></textarea>
-            <br> 
-            <button type="Log In">Log In</button> 
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button id="logInBtn" type="submit">Log In</button> 
         </form>
-        <button id="createAccount">Create Account</button>
-    </main>    
-    
+    <br>
+    <button id="createAccountBtn">Create Account</button>
+    <br>
     <button id="homePgBtn">Move to main screen</button>
-    <script type="module" src="/scripts/login.js"></script> <!-- External JavaScript file -->
 </body>
 </html>
