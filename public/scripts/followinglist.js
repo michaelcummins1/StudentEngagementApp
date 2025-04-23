@@ -21,7 +21,8 @@
             { username: "mrTesting", fullName: "Test Person", profilePic: "../assets/images/blank_pfp.png" },
             { username: "missExample", fullName: "Miss Example", profilePic: "../assets/images/blank_pfp.png" },
             { username: "idk", fullName: "Isaiah Doesnt Know", profilePic: "../assets/images/blank_pfp.png" },
-            { username: "ihaveareallyreallyreallylongnamewhywouldieverdothis", fullName: "Why Did My Parents Give Me Such A Long Name", profilePic: "../assets/images/blank_pfp.png" }
+            { username: "ihaveareallyreallyreallylongnamewhywouldieverevereverdothis", fullName: "Why Did My Parents Give Me Such A Long Name", profilePic: "../assets/images/blank_pfp.png" },
+            { username: "a", fullName: "a", profilePic: "../assets/images/blank_pfp.png" }
         ];
 
         // Function to render the followed users list
@@ -57,7 +58,8 @@
             const query = searchBar.value.toLowerCase();
 
             const filteredUsers = followedUsers.filter(user =>
-                user.username.toLowerCase().includes(query)
+                user.username.toLowerCase().includes(query) ||
+                user.fullName.toLowerCase().includes(query)
             );
 
             renderFollowingList(filteredUsers);

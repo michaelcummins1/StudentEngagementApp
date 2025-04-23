@@ -1,8 +1,31 @@
 /*Style for the app*/
 
+:root{
+    --ursinus-red: #97002E; /*Rename to primary school color later*/
+    --darker-ursinus-red: #750020; /*Rename to darker primary school color later*/
+    --ursinus-gold: #FCB034; /*Rename to secondary school color later*/
+    --darker-ursinus-gold: #966804; /*Rename to darker secondary school color later*/
+
+    --base-color: black; /*Background color*/
+    --secondary-base-color: #222; /*Secondary background color*/
+
+    --base-text-color: white; /*Text color*/
+    --secondary-text-color: gray; /*Secondary text color*/
+
+    --button-text-color: white; /*Text color for buttons, which should be the same for both light and dark*/
+}
+
+.light-theme{
+    --base-color: white; /*Background color*/
+    --secondary-base-color: #e0e0e0; /*Secondary background color*/
+
+    --base-text-color: black; /*Text color*/
+    --secondary-text-color: gray; /*Secondary text color*/
+}
+
 body {
-    background-color: black;  /* Black Background */
-    color: #FFFFFF;  /* White text */
+    background-color: var(--base-color);  /* Black Background */
+    color: var(--base-text-color);  /* White text */
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-items: center;
     margin: 0;
@@ -28,8 +51,8 @@ header {
 }
 
 header button{
-    background-color: black;
-    color: white;
+    background-color: var(--base-color);
+    color: var(--base-text-color);
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -48,17 +71,17 @@ header button{
 header button .icon {
     width: 30px;
     height: 30px;
-    fill: #97002E;
+    fill: var(--ursinus-red);
 }
 
 header button.active {
-    background-color: black;
-    color: #97002E;
-    border:1px solid #97002E;
+    background-color: var(--base-color);
+    color: var(--ursinus-red);
+    border:1px solid var(--ursinus-red);
 }
 
 header button.active .icon {
-    fill: #97002E;
+    fill: var(--ursinus-red);
 }
 
 #ursinusLogo {
@@ -83,8 +106,8 @@ footer {
 
 /* Footer Buttons */
 footer button {
-    background-color: #97002E;
-    color: white;
+    background-color: var(--ursinus-red);
+    color: var(--base-text-color);
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -99,17 +122,17 @@ footer button {
 footer button .icon {
     width: 24px;
     height: 24px;
-    fill: black;
+    fill: var(--base-color);
 }
 
 footer button.active {
-    background-color: black;
-    color: #97002E;
-    border:1px solid #97002E;
+    background-color: var(--base-color);
+    color: var(--base-text-color);
+    border:1px solid var(--base-text-color);
 }
 
 footer button.active .icon {
-    fill: #97002E;
+    fill: var(--base-text-color);
 }
 
 
@@ -128,8 +151,8 @@ footer button.active .icon {
 
 /* Style for buttons */
 .toggle-buttons button {
-    background-color: #97002E;
-    color: white;
+    background-color: var(--ursinus-red);
+    color: var(--button-text-color);
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -141,9 +164,9 @@ footer button.active .icon {
 }
 
 .toggle-buttons button.active {
-    background-color: black;
-    color: #97002E;
-    border:1px solid #97002E;
+    background-color: var(--base-color);
+    color: var(--base-text-color);
+    border:1px solid var(--base-text-color);
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
 }
 
@@ -154,7 +177,7 @@ footer button.active .icon {
     max-width: 400px;
     flex: 1; /* Let it grow to fill the space */
     overflow-y: auto; /* Enables scrolling */
-    background: black;
+    background: var(--base-color);
     padding: 10px;
     border-radius: 8px;
 
@@ -171,7 +194,7 @@ footer button.active .icon {
     max-width: 400px;
     flex: 1; /* Let it grow to fill the space */
     overflow-y: auto; /* Enables scrolling */
-    background: black;
+    background: var(--base-color);
     padding: 10px;
     border-radius: 8px;
 
@@ -184,7 +207,7 @@ footer button.active .icon {
 }
 
 .post{
-    background: #222;
+    background: var(--secondary-base-color);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -196,8 +219,8 @@ footer button.active .icon {
 
 /* BUTTONS */
 button {
-    background-color: #97002E;  /* Ursinus Red buttons */
-    color: white;
+    background-color: var(--ursinus-red);  /* Ursinus Red buttons */
+    color: var(--base-text-color);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -208,7 +231,7 @@ button {
 }
 
 button:hover {
-    background-color: #750020; /* Darker red for hover */
+    background-color: var(--darker-ursinus-red); /* Darker red for hover */
 }
 
 .search-Bar {
@@ -217,19 +240,26 @@ button:hover {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
-    border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
-    background-color: white;
     margin-top: calc(40% + 15px);
   }
-  
+
+.search-Bar:focus-within {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 2px;
+}
 .search-Bar input {
     flex: 1;
-    padding: 8px;
+    padding: 16px;
     border: none;
     outline: none;
     font-size: 1em;
+    color: var(--base-text-color);
+    background-color: var(--secondary-base-color);
+  }
+
+.search-Bar input::placeholder {
+    color: var(--secondary-text-color);
   }
 
 .followingHeader {
@@ -268,26 +298,21 @@ button:hover {
 }
 
 .followed-user {
-    border: 1px solid #222;
-    background-color: #222;
+    background-color: var(--secondary-base-color);
     margin-top: 8px;  /* Adds spacing between users */
     padding: 12px;
     font-size: 18px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     border-radius: 15px;  /* Slightly rounded boxes */
 }
 
 .followed-user a {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     text-decoration: none;
-    color: white;
+    color: var(--base-text-color);
     width: 100%;
-}
-
-.followed-user:hover {
-    background-color: #111;
 }
 
 .profile-pic {
@@ -295,6 +320,12 @@ button:hover {
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+.user-info {
+    flex: 1; /* Take up remaining space */
+    word-break: break-word; /* Wrap long unbreakable words */
+    min-width: 0; /* Prevent flex weirdness */
 }
 
 .user-info h3 {
@@ -305,7 +336,7 @@ button:hover {
 .user-info p {
     margin: 0;
     font-size: 14px;
-    color: gray;
+    color: var(--secondary-text-color);
 }
 
 /* POST CREATION */
@@ -322,12 +353,17 @@ button:hover {
 
 .post-creation-container label {
     display: block;
-    color: #fff;
+    color: var(--base-text-color);
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 5px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.post-creation-container input::placeholder,
+.post-creation-container textarea::placeholder {
+    color: var(--secondary-text-color);
+  }
 
 .post-creation-container input[type="text"],
 .post-creation-container textarea,
@@ -335,9 +371,9 @@ button:hover {
 .post-creation-container input[type="file"] {
     width: 100%;
     padding: 10px;
-    background-color: #333;
-    border: 1px solid #555;
-    color: #fff;
+    background-color: var(--secondary-base-color);
+    border: 1px solid var(--secondary-base-color);
+    color: var(--base-text-color);
     border-radius: 5px;
     font-size: 1em;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -350,8 +386,8 @@ button:hover {
 }
 
 .post-creation-container button[type="submit"] {
-    background-color: #97002E;
-    color: white;
+    background-color: var(--ursinus-red);
+    color: var(--button-text-color);
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -364,14 +400,14 @@ button:hover {
 }
 
 .post-creation-container button[type="submit"]:hover {
-    background-color: #750020;
+    background-color: var(--darker-ursinus-red);
 }
 
 .post-creation-container input:focus,
 .post-creation-container textarea:focus {
     outline: none;
-    border-color: #97002E;
-    box-shadow: 0 0 5px #97002E;
+    border-color: var(--ursinus-red);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 1px;
 }
 
 /* The switch - the box around the slider */
@@ -396,7 +432,7 @@ button:hover {
     top: 0;
     bottom: 0;
     width: 90%;
-    background-color: #ccc;
+    background-color: var(--secondary-text-color);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -408,23 +444,23 @@ button:hover {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: var(--button-text-color);
     -webkit-transition: .4s;
     transition: .4s;
   }
   
   input:checked + .slider {
-    background-color: #750020;
+    background-color: var(--darker-ursinus-red);
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #750020;
+    box-shadow: 0 0 1px var(--darker-ursinus-red);
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
   }
   
   /* Rounded sliders */
@@ -449,8 +485,8 @@ button:hover {
 }
 
 #deleteBtn {
-    background-color: #97002E;
-    color: white;
+    background-color: var(--ursinus-red);
+    color: var(--base-text-color);
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -464,15 +500,15 @@ button:hover {
 #deleteBtn .icon {
     width: 30px;
     height: 30px;
-    fill: black;
+    fill: var(--base-color);
 }
 
 #deleteBtn.active {
-    background-color: black;
-    color: #97002E;
-    border:1px solid #97002E;
+    background-color: var(--base-color);
+    color: var(--ursinus-red);
+    border:1px solid var(--ursinus-red);
 }
 
 #deleteBtn.active .icon {
-    fill: #97002E;
+    fill: var(--ursinus-red);
 }

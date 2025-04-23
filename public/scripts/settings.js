@@ -15,4 +15,23 @@ document.addEventListener("DOMContentLoaded", function () {
     fllwLstBtn.addEventListener("click", () => {
         window.location.href = "/pages/followinglist.html";
     });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === 'light') {
+        document.documentElement.classList.add('light-theme');
+        themeToggle.checked = true;
+    }
+
+    themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+            document.documentElement.classList.add('light-theme');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.classList.remove('light-theme');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
 })

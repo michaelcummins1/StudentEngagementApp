@@ -1,5 +1,4 @@
 # Ignore all files in the folder
+node_modules/**/
 StudentEngagementApp/.vs/*
 .env
-# Except specific files you want to track
-!folder_name/important_file.txt.

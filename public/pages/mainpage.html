@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <link rel="stylesheet" href="/styles/styles.css">  <!-- External CSS -->
+    <!-- Light Mode/Theme Script -->
+    <script>
+        (function () {
+          const theme = localStorage.getItem('theme');
+          if (theme === 'light') {
+            document.documentElement.classList.add('light-theme');
+          }
+        })();
+      </script>      
 </head>
 <body>
 
