@@ -303,13 +303,13 @@ button:hover {
     padding: 12px;
     font-size: 18px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     border-radius: 15px;  /* Slightly rounded boxes */
 }
 
 .followed-user a {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     text-decoration: none;
     color: var(--base-text-color);
     width: 100%;
@@ -320,6 +320,12 @@ button:hover {
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+.user-info {
+    flex: 1; /* Take up remaining space */
+    word-break: break-word; /* Wrap long unbreakable words */
+    min-width: 0; /* Prevent flex weirdness */
 }
 
 .user-info h3 {
