@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollView.innerHTML = list.map(post => `
             <div class="post">
                 <div class="post-info">
-                    <h3>${post.user_id}</h3>
+                    <h3>${post.account_id}</h3>
                     <h3>${post.title}</h3>
                     <p>${post.text}</p>
                 </div>
