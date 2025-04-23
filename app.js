@@ -6,16 +6,13 @@ const path = require('path');
 const app = express(); //Server Instance
 const port = process.env.PORT|| 3000; //Port
 
-//Functions Not sure where to put this yet.
-function generateAccessToken(username) {
-    return jwt.sign(username, process.env.TOKEN_SECRET, { expiresIn: '1800s' });
-  }
 
-//Routers (I dont like this word but what can u do)
+
+//Loading Routing Dependences
 app.use('/accounts', require('./routes/accountRoutes'));
-//app.use('/auth', require('./routes/authRoutes'));
-//app.use('/posts', require('./routes/postRoutes'));
-//app.use('/tags', require('./routes/tagRoutes'));
+app.use('/auth', require('./routes/authRoutes'));
+app.use('/posts', require('./routes/postRoutes'));
+app.use('/tags', require('./routes/tagRoutes'));
 
 //Static Assests Access
 app.use(express.static(path.join(__dirname, 'public')));

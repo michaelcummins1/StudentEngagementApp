@@ -4,13 +4,17 @@ const db = Database('studentAppDB.db');
 db.exec(`
     CREATE TABLE IF NOT EXISTS accounts(
         accountID INTEGER PRIMARY KEY AUTOINCREMENT,
+        email VARCHAR(255) NOT NULL,        
         password TEXT NOT NULL,
-        email VARCHAR(255) NOT NULL,
-        pfp SMALLBLOB,
         creationDate DATE NOT NULL,
-        postPerms BOOLEAN NOT NULL,
-        adminPerms BOOLEAN NOT NULL,
         deletedAccount BOOLEAN NOT NULL
+    );`
+);
+db.exec(`
+    CREATE TABLE IF NOT EXISTS accountPerms(
+    accountID INTEGER PRIMARY KEY,
+    postPerms BOOLEAN NOT NULL,
+    adminPerms BOOLEAN NOT NULL
     );`
 );
 //creating posts Table
