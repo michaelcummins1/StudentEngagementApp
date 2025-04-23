@@ -12,7 +12,7 @@ function generateAccessToken(username) {
   }
 
 //Routers (I dont like this word but what can u do)
-//app.use('/accounts', require('./routes/accountRoutes'));
+app.use('/accounts', require('./routes/accountRoutes'));
 //app.use('/auth', require('./routes/authRoutes'));
 //app.use('/posts', require('./routes/postRoutes'));
 //app.use('/tags', require('./routes/tagRoutes'));

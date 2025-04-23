@@ -58,7 +58,8 @@
             const query = searchBar.value.toLowerCase();
 
             const filteredUsers = followedUsers.filter(user =>
-                user.username.toLowerCase().includes(query)
+                user.username.toLowerCase().includes(query) ||
+                user.fullName.toLowerCase().includes(query)
             );
 
             renderFollowingList(filteredUsers);

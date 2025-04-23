@@ -1,4 +1,4 @@
-const db = require('../db');
+const db = require('../databaseinit');
 // We need an encryption module (pls find)
 //Creation date also gonna need some kind of magic.
 exports.createAccount = async (email, password, pfp,creationDate) => {
