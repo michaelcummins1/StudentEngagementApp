@@ -13,9 +13,9 @@ function generateAccessToken(username) {
 
 //Routers (I dont like this word but what can u do)
 app.use('/accounts', require('./routes/accountRoutes'));
-//app.use('/auth', require('./routes/authRoutes'));
-//app.use('/posts', require('./routes/postRoutes'));
-//app.use('/tags', require('./routes/tagRoutes'));
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/posts', require('./routes/postRoutes'));
+app.use('/api/tags', require('./routes/tagRoutes'));
 
 //Static Assests Access
 app.use(express.static(path.join(__dirname, 'public')));
