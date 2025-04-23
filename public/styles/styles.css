@@ -444,7 +444,7 @@ button:hover {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: var(--base-text-color);
+    background-color: var(--button-text-color);
     -webkit-transition: .4s;
     transition: .4s;
   }
