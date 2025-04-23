@@ -11,6 +11,8 @@
 
     --base-text-color: white; /*Text color*/
     --secondary-text-color: gray; /*Secondary text color*/
+
+    --button-text-color: white; /*Text color for buttons, which should be the same for both light and dark*/
 }
 
 .light-theme{
@@ -150,7 +152,7 @@ footer button.active .icon {
 /* Style for buttons */
 .toggle-buttons button {
     background-color: var(--ursinus-red);
-    color: var(--base-text-color);
+    color: var(--button-text-color);
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -163,8 +165,8 @@ footer button.active .icon {
 
 .toggle-buttons button.active {
     background-color: var(--base-color);
-    color: var(--ursinus-red);
-    border:1px solid var(--ursinus-red);
+    color: var(--base-text-color);
+    border:1px solid var(--base-text-color);
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
 }
 
@@ -376,7 +378,7 @@ button:hover {
 
 .post-creation-container button[type="submit"] {
     background-color: var(--ursinus-red);
-    color: var(--base-text-color);
+    color: var(--button-text-color);
     border: none;
     border-radius: 5px;
     padding: 10px;
