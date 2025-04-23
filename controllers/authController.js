@@ -1,4 +1,4 @@
-const Account = require('..models/accountModel');
+const Account = require('../models/accountModel');
 const bcrypt = require('bcrypt');
 const {
     generateAccessToken,
@@ -6,7 +6,7 @@ const {
     rotateRefreshToken,
     getSession,
     revokeSession
-} = require('../auth/jwt');
+} = require('../auth/authJWT');
 exports.register = async (req,res) => {
     
 }
