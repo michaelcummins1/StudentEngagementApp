@@ -16,11 +16,10 @@ Example usage:
 post = new Post(1234, 5678, Date(2025, 11, 25, 0, 0, 0, 0), "person@ursinus.edu", "title",...);
 */
 
-export function Post(user_id, post_id, post_date, email, title, text, image, video, link, deleted){
-    this.user_id = user_id;
+export function Post(account_id_id, post_id, post_date, email, title, text, image, video, link, deleted){
+    this.account_id = account_id_id;
     this.post_id = post_id
     this.post_date = post_date;
-    this.email = email;
     this.title = title;
     this.text = text;
     this.image = image;
