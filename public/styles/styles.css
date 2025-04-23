@@ -13,6 +13,14 @@
     --secondary-text-color: gray; /*Secondary text color*/
 }
 
+.light-theme{
+    --base-color: white; /*Background color*/
+    --secondary-base-color: #e0e0e0; /*Secondary background color*/
+
+    --base-text-color: black; /*Text color*/
+    --secondary-text-color: gray; /*Secondary text color*/
+}
+
 body {
     background-color: var(--base-color);  /* Black Background */
     color: var(--base-text-color);  /* White text */
