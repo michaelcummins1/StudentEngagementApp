@@ -127,12 +127,12 @@ footer button .icon {
 
 footer button.active {
     background-color: var(--base-color);
-    color: var(--ursinus-red);
-    border:1px solid var(--ursinus-red);
+    color: var(--base-text-color);
+    border:1px solid var(--base-text-color);
 }
 
 footer button.active .icon {
-    fill: var(--ursinus-red);
+    fill: var(--base-text-color);
 }
 
 
@@ -449,9 +449,9 @@ button:hover {
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
   }
   
   /* Rounded sliders */
