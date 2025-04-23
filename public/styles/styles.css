@@ -244,7 +244,10 @@ button:hover {
     overflow: hidden;
     margin-top: calc(40% + 15px);
   }
-  
+
+.search-Bar:focus-within {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 2px;
+}
 .search-Bar input {
     flex: 1;
     padding: 16px;
@@ -398,7 +401,7 @@ button:hover {
 .post-creation-container textarea:focus {
     outline: none;
     border-color: var(--ursinus-red);
-    box-shadow: 0 0 5px var(--ursinus-red);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 1px;
 }
 
 /* The switch - the box around the slider */
