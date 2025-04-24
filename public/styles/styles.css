@@ -410,6 +410,146 @@ button:hover {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 1px;
 }
 
+/* Login Page */
+.login-container {
+    padding: 20px;
+    margin: 80px auto; /* Top & bottom spacing, horizontal auto-centering */
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+
+    max-height: calc(100vh - 160px); /* Viewport height minus header+footer space */
+    overflow-y: auto; /* Scrolls if content is too tall */
+}
+
+.login-container label {
+    display: block;
+    color: var(--base-text-color);
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container input::placeholder,
+.login-container textarea::placeholder {
+    color: var(--secondary-text-color);
+  }
+
+.login-container input[type="text"],
+.login-container textarea,
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-base-color);
+    border: 1px solid var(--secondary-base-color);
+    color: var(--base-text-color);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.login-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.login-container button[type="submit"] {
+    background-color: var(--ursinus-red);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: var(--darker-ursinus-red);
+}
+
+.login-container input:focus,
+.login-container textarea:focus {
+    outline: none;
+    border-color: var(--ursinus-red);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 1px;
+}
+
+/* Registration Page */
+.registration-container {
+    padding: 20px;
+    margin: 80px auto; /* Top & bottom spacing, horizontal auto-centering */
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+
+    max-height: calc(100vh - 160px); /* Viewport height minus header+footer space */
+    overflow-y: auto; /* Scrolls if content is too tall */
+}
+
+.registration-container label {
+    display: block;
+    color: var(--base-text-color);
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.registration-container input::placeholder,
+.registration-container textarea::placeholder {
+    color: var(--secondary-text-color);
+  }
+
+.registration-container input[type="text"],
+.registration-container textarea,
+.registration-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-base-color);
+    border: 1px solid var(--secondary-base-color);
+    color: var(--base-text-color);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.registration-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.registration-container button[type="submit"] {
+    background-color: var(--ursinus-red);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.registration-container button[type="submit"]:hover {
+    background-color: var(--darker-ursinus-red);
+}
+
+.registration-container input:focus,
+.registration-container textarea:focus {
+    outline: none;
+    border-color: var(--ursinus-red);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 1px;
+}
+
 /* The switch - the box around the slider */
 .switch {
     position: relative;
