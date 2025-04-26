@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create An Account</title>
     <link rel="stylesheet" href="/styles/styles.css">  <!-- External CSS -->
+    <!-- Light Mode/Theme Script -->
+    <script>
+        (function () {
+          const theme = localStorage.getItem('theme');
+          if (theme === 'light') {
+            document.documentElement.classList.add('light-theme');
+          }
+        })();
+      </script>  
 </head>
 <header>
 
@@ -20,9 +29,9 @@
             <label for="password">Password</label>
             <input type = "password" name="password" rows="1" placeholder="Password" required></textarea>
             <br> 
-            <button type="registerAccountBtn">Register Account</button> 
+            <button id="registerAccountBtn" type="submit">Register Account</button> 
         </form>
-        <button id="backToLoginBtn">Back</button>
+        <button id="backToLoginBtn" type="submit">Back</button>
     </main> 
     <script type="module" src="/scripts/registration.js"></script> <!-- External JavaScript file -->
 </body>
