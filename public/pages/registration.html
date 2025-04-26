@@ -11,10 +11,11 @@
 </header>
 
 <body>
+<h1>Register</h1>
     <main class="registration-container">
-        <form id="registerAccountSubmission">         
+        <form id="registerAccountSubmission" action= "/api/auth" method="POST">         
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="email" required>
+            <input type="text" id="email" name="email" placeholder="Email" required>
             <br>
             <label for="password">Password</label>
             <input type = "password" name="password" rows="1" placeholder="Password" required></textarea>
