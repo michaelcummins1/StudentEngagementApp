@@ -58,10 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Filters all posts in postList to a few posts and returns followingPostList
     function filterPosts(postList, followingList) {
-        return postList.filter(post => followingList.includes(post.user_id));
+        return postList.filter(post => followingList.includes(post.account_id));
     }
 
     let followingPostList = filterPosts(postList, followingList)
+    console.log(followingPostList)
 
     // Event Listeners for buttons
     mainBtn.addEventListener("click", () => switchView(mainBtn, postList));

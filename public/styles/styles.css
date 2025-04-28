@@ -13,14 +13,18 @@
     --secondary-text-color: gray; /*Secondary text color*/
 
     --button-text-color: white; /*Text color for buttons, which should be the same for both light and dark*/
+
+    --base-shadow-color: #F2F0EF;
 }
 
 .light-theme{
-    --base-color: white; /*Background color*/
+    --base-color: #F2F0EF; /*Background color*/
     --secondary-base-color: #e0e0e0; /*Secondary background color*/
 
     --base-text-color: black; /*Text color*/
     --secondary-text-color: gray; /*Secondary text color*/
+
+    --base-shadow-color: #66615E;
 }
 
 body {
@@ -129,6 +133,7 @@ footer button.active {
     background-color: var(--base-color);
     color: var(--base-text-color);
     border:1px solid var(--base-text-color);
+    box-shadow: 0 0 3px var(--base-shadow-color);
 }
 
 footer button.active .icon {
@@ -167,7 +172,7 @@ footer button.active .icon {
     background-color: var(--base-color);
     color: var(--base-text-color);
     border:1px solid var(--base-text-color);
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+    box-shadow: 0 0 3px var(--base-shadow-color);
 }
 
 

@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             body: JSON.stringify({accountID: accountID, postDate: postDate, Title: title, postDescription:body, image: image, video: video, link:link})
           });
 
-        //window.location.href = "/pages/mainpage.html"
+        window.location.href = "/pages/mainpage.html"
       });
 
     homePgBtn.addEventListener("click", () => {
