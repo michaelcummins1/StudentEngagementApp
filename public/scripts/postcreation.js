@@ -7,11 +7,7 @@ async function apiFetch(url, options = {}) {
     };
 }
 
-const accountID = 0; // 
-
-if(message != null){
-  console.log(message.text);
-}
+const accountID = 0;
 
 
 
