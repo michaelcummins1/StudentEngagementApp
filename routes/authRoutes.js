@@ -4,3 +4,5 @@ const authController = require('../controllers/authController');
 const { verifyAccessToken } = require('../auth/authJWT');
 
 module.exports = router;
+
+router.post('/', authController.register);

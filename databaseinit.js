@@ -4,13 +4,27 @@ const db = Database('studentAppDB.db');
 db.exec(`
     CREATE TABLE IF NOT EXISTS accounts(
         accountID INTEGER PRIMARY KEY AUTOINCREMENT,
-        password TEXT NOT NULL,
-        email VARCHAR(255) NOT NULL,
-        pfp SMALLBLOB,
+        email VARCHAR(255) UNIQUE NOT NULL,        
+        password VARCHAR(255) NOT NULL,
         creationDate DATE NOT NULL,
-        postPerms BOOLEAN NOT NULL,
-        adminPerms BOOLEAN NOT NULL,
         deletedAccount BOOLEAN NOT NULL
+    );`
+);
+//Create accountPerms Table
+db.exec(`
+    CREATE TABLE IF NOT EXISTS accountPerms(
+    accountID INTEGER PRIMARY KEY,
+    postPerms BOOLEAN NOT NULL,
+    adminPerms BOOLEAN NOT NULL
+    );`
+);
+db.exec(`
+    CREATE TABLE IF NOT EXISTS followings(
+    followRecordID INTEGER PRIMARY KEY AUTOINCREMENT,
+    followerID INTEGER NOT NULL,
+    followingID INTEGER NOT NULL,
+    status BOOLEAN NOT NULL DEFAULT FALSE,
+    FOREIGN KEY (followerID) REFERENCES accounts(accountID)
     );`
 );
 //creating posts Table
@@ -18,7 +32,7 @@ db.exec(`
     CREATE TABLE IF NOT EXISTS posts (
         postID INTEGER PRIMARY KEY AUTOINCREMENT,
         accountID INT NOT NULL, 
-        postDate INTEGER NOT NULL,
+        postDate DATE NOT NULL,
         Title nvarchar(255) NOT NULL,
         postDescription nvarchar(3000),
         link nvarchar(1000),
@@ -27,12 +41,14 @@ db.exec(`
         FOREIGN KEY (accountID) REFERENCES accounts(accountID)
     );`
 );
+//Create tags table
 db.exec(`
     CREATE TABLE IF NOT EXISTS tags (
         tagID INTEGER PRIMARY KEY,
         tagName nvarchar(255)
     );`
 );
+//create postTags Table (Relate posts to tags)
 db.exec(`
     CREATE TABLE IF NOT EXISTS postTags (
         tagID INTEGER PRIMARY KEY,
@@ -40,6 +56,5 @@ db.exec(`
         FOREIGN KEY (postID) REFERENCES posts(postID)        
         );`
 );
-db.close();
-
 //prepared statement
+module.exports = db;

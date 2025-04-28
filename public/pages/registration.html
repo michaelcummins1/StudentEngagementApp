@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create An Account</title>
     <link rel="stylesheet" href="/styles/styles.css">  <!-- External CSS -->
+    <!-- Light Mode/Theme Script -->
+    <script>
+        (function () {
+          const theme = localStorage.getItem('theme');
+          if (theme === 'light') {
+            document.documentElement.classList.add('light-theme');
+          }
+        })();
+      </script>  
 </head>
 <header>
 
 </header>
 
 <body>
+<h1>Register</h1>
     <main class="registration-container">
-        <form id="registerAccountSubmission">         
-            <label for="username">Username</label>
-            <input type="text" id="email" name="email" placeholder="email" required>
+        <form id="registerAccountSubmission" action= "/api/auth" method="POST">         
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Email" required>
             <br>
             <label for="password">Password</label>
-            <textarea id="password" name="password" rows="1" placeholder="Password" required></textarea>
+            <input type = "password" name="password" rows="1" placeholder="Password" required></textarea>
             <br> 
-            <label for="profilePicture">Profile Picture</label>
-            <input type="file" id="pfp" name="pfp" accept="image/*">
-            <br>
-            <button type="registerAccountBtn">Register Account</button> 
+            <button id="registerAccountBtn" type="submit">Register Account</button> 
         </form>
-        <button id="backToLoginBtn">Back</button>
+        <button id="backToLoginBtn" type="submit">Back</button>
     </main> 
     <script type="module" src="/scripts/registration.js"></script> <!-- External JavaScript file -->
 </body>
