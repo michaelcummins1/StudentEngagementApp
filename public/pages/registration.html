@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create An Account</title>
     <link rel="stylesheet" href="/styles/styles.css">  <!-- External CSS -->
+    <!-- Light Mode/Theme Script -->
+    <script>
+        (function () {
+          const theme = localStorage.getItem('theme');
+          if (theme === 'light') {
+            document.documentElement.classList.add('light-theme');
+          }
+        })();
+      </script>  
 </head>
 <header>
 
 </header>
 
 <body>
+<h1>Register</h1>
     <main class="registration-container">
-        <form id="registerAccountSubmission">         
+        <form id="registerAccountSubmission" action= "/api/auth" method="POST">         
             <label for="email">Email</label>
             <input type="text" id="email" name="email" placeholder="Email" required>
             <br>

@@ -291,6 +291,20 @@ button:hover {
     justify-content: center; /* Ensures equal spacing */
     gap: 20px;
 }
+
+.userProfileHeader{
+    width: 100%;  /* Ensures full width */
+    text-align: center;
+    position: fixed;
+    padding: 10px;
+    height: 65px; /* Fixed height for the header */
+    line-height: 1.2; /* Ensures text is vertically aligned */
+    z-index: 10; /* Keeps header on top */
+    display: flex;
+    justify-content: center; /* Ensures equal spacing */
+    gap: 20px;
+}
+
 #followingList {
     list-style-type: none;
     padding: 0;
@@ -651,4 +665,71 @@ button:hover {
 
 #deleteBtn.active .icon {
     fill: var(--ursinus-red);
+}
+
+/* USER PROFILE */
+.profile-container {
+    padding: 20px;
+    margin: 80px auto; /* Top & bottom spacing, horizontal auto-centering */
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+
+    max-height: calc(100vh - 160px); /* Viewport height minus header+footer space */
+    overflow-y: auto; /* Scrolls if content is too tall */
+}
+
+.profile-container label {
+    display: block;
+    color: var(--base-text-color);
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-container input::placeholder,
+.profile-container textarea::placeholder {
+    color: var(--secondary-text-color);
+  }
+
+.profile-container input[type="text"],
+.profile-container textarea,
+.profile-container input[type="url"],
+.profile-container input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-base-color);
+    border: 1px solid var(--secondary-base-color);
+    color: var(--base-text-color);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.profile-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.profile-container button[type="submit"] {
+    background-color: var(--ursinus-red);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.profile-container input:focus,
+.profile-container textarea:focus {
+    outline: none;
+    border-color: var(--ursinus-red);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 1px;
 }

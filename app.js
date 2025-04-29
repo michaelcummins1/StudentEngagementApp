@@ -6,10 +6,17 @@ const path = require('path');
 const app = express(); //Server Instance
 const port = process.env.PORT|| 3000; //Port
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+//Loading Rendering Engine
+app.engine('html',require('ejs').renderFile);
+app.set('view engine','html');
 
+//set ejs custom path
+app.set('views', path.join(__dirname,'public/pages'));
 
 //Loading Routing Dependences
-app.use('/accounts', require('./routes/accountRoutes'));
+app.use('/api/accounts', require('./routes/accountRoutes'));
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/posts', require('./routes/postRoutes'));
 app.use('/api/tags', require('./routes/tagRoutes'));

@@ -34,7 +34,7 @@ exports.generateAccessToken = function(user) {
       const sessionId = uuidv4();
       const refreshToken = jwt.sign(
         { sessionId, id: userId },
-        REFRESH_SECRET,
+        process.env.REFRESH_SECRET,
         { expiresIn: '7d' }
       );
       sessions[sessionId] = {
@@ -50,7 +50,7 @@ exports.generateAccessToken = function(user) {
 
   exports.rotateRefreshToken = function (oldToken) {
     try {
-      const payload = jwt.verify(oldToken, REFRESH_SECRET);
+      const payload = jwt.verify(oldToken, process.env.REFRESH_SECRET);
       const sessionId = payload.sessionId;
       if (!sessions[sessionId] || !sessions[sessionId].active) {
         throw new Error("Invalid or revoked session");
@@ -67,7 +67,7 @@ exports.generateAccessToken = function(user) {
   
       const newToken = jwt.sign(
         { sessionId: newSessionId, id: payload.id, email: payload.email },
-        REFRESH_SECRET,
+        process.env.REFRESH_SECRET,
         { expiresIn: '7d' }
       );
   

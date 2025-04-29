@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "/pages/settings.html"
     });
     acctBtn.addEventListener("click", () => {
-        window.location.href = "/pages/createdposts.html"
+        window.location.href = "/pages/userprofile.html"
     });
 
     // Load default content on page load
