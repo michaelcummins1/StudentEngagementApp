@@ -10,11 +10,11 @@ exports.create = (req, res) => {
         } else {
           // Handle form submission (HTML response)
           if (err) {
-            return res.render('students/add', {
+            return res.render('pages/postcreation', {
               message: { type: 'error', text: 'Failed to add student: ' + err.message }
             });
           }
-          return res.render('students/add', {
+          return res.render('pages/postcreation', {
             message: { type: 'success', text: 'Student added successfully!' }
           });
         }

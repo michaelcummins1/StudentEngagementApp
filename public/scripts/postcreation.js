@@ -1,3 +1,19 @@
+async function apiFetch(url, options = {}) {
+    const token = localStorage.getItem('token');
+    options.headers = {
+      ...(options.headers || {}),
+      'Authorization': 'Bearer ' + token,
+      'Content-Type': 'application/json'
+    };
+}
+
+const accountID = 0; // 
+
+if(message != null){
+  console.log(message.text);
+}
+
+
 
 // Listener for the page upon load
 document.addEventListener("DOMContentLoaded", function () {
@@ -22,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const link = document.getElementById("postLink").value;
         const image = document.getElementById("postImage").files[0];
         const video = document.getElementById("postVideo").files[0];
+        const postDate = new Date()
     
         // Need to send this data to the database as a new Post
         console.log("Title:", title);
@@ -30,7 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Image File:", image);
         console.log("Video File:", video);
 
-        window.location.href = "/pages/mainpage.html"
+        apiFetch('/api/post', {
+            method: 'POST',
+            body: JSON.stringify({accountID: accountID, postDate: postDate, Title: title, postDescription:body, image: image, video: video, link:link})
+          });
+
+        //window.location.href = "/pages/mainpage.html"
       });
 
     homePgBtn.addEventListener("click", () => {
