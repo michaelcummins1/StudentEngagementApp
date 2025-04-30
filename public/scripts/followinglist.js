@@ -2,6 +2,7 @@
 
     document.addEventListener("DOMContentLoaded", function () {
         const followingListContainer = document.getElementById("followingListContainer");
+        const followPgBtn = document.getElementById("followPgBtn");
         const homePgBtn = document.getElementById("homePgBtn");
         const createPstBtn = document.getElementById("createPstBtn");
         const fllwLstBtn = document.getElementById("fllwLstBtn");
