@@ -61,10 +61,12 @@ blockquote {
     border-radius: 8px;
 }
 
-.faq {
-    margin-top: 2rem;
-    padding: 1rem;
-    background: var(--secondary-school-color);
-    border: 1px solid #ddd;
-    border-radius: 8px;
+p {
+    background: var(--secondary-base-color);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: var(--button-radius);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
