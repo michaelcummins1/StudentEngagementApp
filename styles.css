@@ -97,3 +97,15 @@ blockquote {
 .faq hr {
     border: 2px solid var(--base-color);
 }
+
+.header{
+    width: 100%;  /* Ensures full width */
+    text-align: center;
+    padding: 10px;
+    height: 100px; /* Fixed height for the header */
+    line-height: 1.2; /* Ensures text is vertically aligned */
+    z-index: 10; /* Keeps header on top */
+    display: flex;
+    justify-content: left; /* Ensures equal spacing */
+    gap: 20px;
+}
