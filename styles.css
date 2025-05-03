@@ -28,8 +28,31 @@ body {
     background-color: var(--base-color);
 }
 
-h1, h2, h3, h4 {
+hr {
+    border: 2px solid var(--primary-school-color);
+    border-radius: var(--button-radius);
+}
+
+h1 {
     color: var(--base-text-color);
+}
+
+h2, h3, h4 {
+    color: var(--secondary-school-color);
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+p {
+    background: var(--base-color);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: var(--button-radius);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -54,19 +77,23 @@ blockquote {
 }
 
 .faq {
+    color: var(--base-color);
     margin-top: 2rem;
     padding: 1rem;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background: var(--secondary-school-color);
+    border-radius: var(--button-radius);
 }
 
-p {
-    background: var(--secondary-base-color);
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: var(--button-radius);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.faq h1 {
+    color: var(--base-color);
+    background: var(--secondary-school-color);
+}
+
+.faq p {
+    color: var(--base-color);
+    background: var(--secondary-school-color);
+}
+
+.faq hr {
+    border: 2px solid var(--base-color);
 }
