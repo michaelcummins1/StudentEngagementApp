@@ -1,34 +1,70 @@
+:root{
+    /* BUTTON CONFIG */
+    --button-radius: 12px; /*How smooth buttons are*/
+
+    /* SCHOOL COLORS */
+    --primary-school-color: #97002E; /* Primary school color */
+    --darker-primary-school-color: #750020; /* Darker primary school color */
+    --secondary-school-color: #FCB034; /* Secondary school color */
+    --darker-secondary-school-color: #966804; /* Darker secondary school color */
+
+    /* DARK MODE COLORS */
+    --base-color: black; /*Background color*/
+    --secondary-base-color: #222; /*Secondary background color*/
+
+    --base-text-color: white; /*Text color*/
+    --secondary-text-color: gray; /*Secondary text color*/
+
+    --button-text-color: white; /*Text color for buttons, which should be the same for both light and dark*/
+
+    --base-shadow-color: #F2F0EF;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 2rem;
     line-height: 1.6;
-    color: white;
-    background-color: black;
-  }
-  h1, h2, h3, h4 {
-    color: #333;
-  }
-  a {
-    color: #1a73e8;
-  }
-  ul {
+    color: var(--base-text-color);
+    background-color: var(--base-color);
+}
+
+h1, h2, h3, h4 {
+    color: var(--base-text-color);
+}
+
+a {
+    color: var(--secondary-school-color);
+}
+
+ul {
     margin-left: 1.5rem;
-  }
-  code {
+}
+
+code {
     background: #eee;
     padding: 0.2em 0.4em;
     border-radius: 4px;
-  }
-  blockquote {
+}
+
+blockquote {
     border-left: 4px solid #ccc;
     margin-left: 0;
     padding-left: 1rem;
     color: #666;
-  }
-  .faq {
+}
+
+.faq {
     margin-top: 2rem;
     padding: 1rem;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-  }
+}
+
+.faq {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--secondary-school-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
