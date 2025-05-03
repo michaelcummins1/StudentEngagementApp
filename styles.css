@@ -1,8 +1,9 @@
 body {
-    font-family: font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 2rem;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    color: white;
+    background-color: black;
   }
   h1, h2, h3, h4 {
     color: #333;
