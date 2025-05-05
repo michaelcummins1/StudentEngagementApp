@@ -22,9 +22,6 @@ function testUserIDKey_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testUserIDKey_withValue();
-testUserIDKey_withoutValue();
 
 // 1.1.3 Administrative Permissions
 function testAdminPermissions(userID, permissions) {
@@ -47,13 +44,6 @@ function testAdminPermissions_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testAdminPermissions_withValue(true);
-testAdminPermissions_withoutValue(true);
-
-// build a test for Forgotten username
-
-// build a test forgotten user password
 
 // 1.1.5 Post Permissions
 function testPostPermissions(userID, permissions) {
@@ -76,10 +66,6 @@ function testPostPermissions_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testPostPermissions_withValue(true);
-testPostPermissions_withoutValue(true);
-
 // 1.2.2 Post-Date Key
 function testPostDateKey(postDate) {
     console.log("Running testPostDateKey...");
@@ -100,10 +86,6 @@ function testPostDateKey_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testPostDateKey_withValue();
-testPostDateKey_withoutValue();
-
 // 1.2.3 Like Key
 function testLikeKey(like) {
     console.log("Running testLikeKey...");
@@ -124,10 +106,6 @@ function testLikeKey_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testLikeKey_withValue();
-testLikeKey_withoutValue(); 
-
 // 1.3 Credential Interface
 function testCredentialInterface(credential) {
     console.log("Running testCredentialInterface...");
@@ -148,10 +126,6 @@ function testCredentialInterface_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testCredentialInterface_withValue();
-testCredentialInterface_withoutValue();
-
 // This is not included in the original unit test code, but it is a good practice to test forget username
 function testForgotUsername(username) {
     console.log("Running testForgotUsername...");
@@ -173,10 +147,6 @@ function testForgotUsername_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testForgotUsername_withValue();
-testForgotUsername_withoutValue();
-
 // This is not included in the original unit test code, but it is a good practice to test forget password
 function testForgotPassword(password) {
     console.log("Running testForgotPassword...");
@@ -197,10 +167,6 @@ function testForgotPassword_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testForgotPassword_withValue();
-testForgotPassword_withoutValue();
-
 // 1.4.1 Following List
 function testFollowingList(followingList) {
     console.log("Running testFollowingList...");
@@ -221,10 +187,6 @@ function testFollowingList_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testFollowingList_withValue();
-testFollowingList_withoutValue();
-
 // 2.2 Institutional Selection
 function testInstitutionalSelection(institution) {
     console.log("Running testInstitutionalSelection...");
@@ -245,10 +207,6 @@ function testInstitutionalSelection_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testInstitutionalSelection_withValue();
-testInstitutionalSelection_withoutValue();
-
 // 2.3 Account Type Field
 function testAccountTypeField(accountType) {
     console.log("Running testAccountTypeField...");
@@ -269,10 +227,6 @@ function testAccountTypeField_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testAccountTypeField_withValue();
-testAccountTypeField_withoutValue();
-
 // 2.4 Email Field
 function testEmailField(email) {
     console.log("Running testEmailField...");
@@ -293,10 +247,6 @@ function testEmailField_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testEmailField_withValue();
-testEmailField_withoutValue();
-
 // 3.1 Admin Account Creation  
 function testAdminAccountCreation(userID, accountType) {
     console.log("Running testAdminAccountCreation...");
@@ -318,10 +268,6 @@ function testAdminAccountCreation_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testAdminAccountCreation_withValue(true);
-testAdminAccountCreation_withoutValue(true);
-
 // 4.1.1 Choose Following
 function testChooseFollowing(followingList) {
     console.log("Running testChooseFollowing...");
@@ -342,10 +288,6 @@ function testChooseFollowing_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testChooseFollowing_withValue();
-testChooseFollowing_withoutValue();
-
 // 4.1.2 View Following
 function testViewFollowing(followingList) {
     console.log("Running testViewFollowing...");
@@ -366,10 +308,6 @@ function testViewFollowing_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testViewFollowing_withValue();
-testViewFollowing_withoutValue();
-
 // 4.1.3 Delete Following
 function testDeleteFollowing(followingList) {
     console.log("Running testDeleteFollowing...");
@@ -390,10 +328,6 @@ function testDeleteFollowing_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testDeleteFollowing_withValue();
-testDeleteFollowing_withoutValue();
-
 // 4.2.1 Create Post
 function testCreatePost(postContent) {
     console.log("Running testCreatePost...");
@@ -414,10 +348,6 @@ function testCreatePost_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testCreatePost_withValue();
-testCreatePost_withoutValue();
-
 // 4.2.2 Attach Image
 function testAttachImage(image) {
     console.log("Running testAttachImage...");
@@ -438,10 +368,6 @@ function testAttachImage_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testAttachImage_withValue();
-testAttachImage_withoutValue();
-
 // 4.2.3 Attach Link
 function testAttachLink(link) {
     console.log("Running testAttachLink...");
@@ -462,10 +388,6 @@ function testAttachLink_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testAttachLink_withValue();
-testAttachLink_withoutValue();
-
 // 4.2.4 Attach Video
 function testAttachVideo(video) {
     console.log("Running testAttachVideo...");
@@ -486,10 +408,6 @@ function testAttachVideo_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testAttachVideo_withValue();
-testAttachVideo_withoutValue();
-
 // 4.2.5 View Post
 function testViewPost(postID) {
     console.log("Running testViewPost...");
@@ -510,10 +428,6 @@ function testViewPost_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testViewPost_withValue();
-testViewPost_withoutValue();
-
 // 5.2 Following Only Feed
 function testFollowingOnlyFeed(feed) {
     console.log("Running testFollowingOnlyFeed...");
@@ -534,10 +448,6 @@ function testFollowingOnlyFeed_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testFollowingOnlyFeed_withValue();
-testFollowingOnlyFeed_withoutValue();
-
 // 6.1.1 Scrolling
 function testScrolling(scrollPosition) {
     console.log("Running testScrolling...");
@@ -558,10 +468,6 @@ function testScrolling_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testScrolling_withValue();
-testScrolling_withoutValue();
-
 // 6.2.1 Search Button
 function testSearchButton(searchQuery) {
     console.log("Running testSearchButton...");
@@ -582,10 +488,6 @@ function testSearchButton_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testSearchButton_withValue();
-testSearchButton_withoutValue();
-
 // 6.2.2 Setting Button
 function testSettingButton(setting) {
     console.log("Running testSettingButton...");
@@ -606,10 +508,6 @@ function testSettingButton_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testSettingButton_withValue();
-testSettingButton_withoutValue();
-
 // 6.3.1 Main Page Button
 function testMainPageButton(mainPage) {
     console.log("Running testMainPageButton...");
@@ -630,10 +528,6 @@ function testMainPageButton_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testMainPageButton_withValue();
-testMainPageButton_withoutValue();
-
 // 6.3.2 Following Page Button
 function testFollowingPageButton(followingPage) {
     console.log("Running testFollowingPageButton...");
@@ -654,10 +548,6 @@ function testFollowingPageButton_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testFollowingPageButton_withValue();
-testFollowingPageButton_withoutValue();
-
 // 6.3.3 Create a Post Button
 function testCreatePostButton(createPost) {
     console.log("Running testCreatePostButton...");
@@ -678,10 +568,6 @@ function testCreatePostButton_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testCreatePostButton_withValue();
-testCreatePostButton_withoutValue();
-
 // 6.6 Post Creation Page
 function testPostCreationPage(postContent) {
     console.log("Running testPostCreationPage...");
@@ -702,10 +588,6 @@ function testPostCreationPage_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testPostCreationPage_withValue();
-testPostCreationPage_withoutValue();
-
 // 6.6.1 Text Box
 function testTextBox(text) {
     console.log("Running testTextBox...");
@@ -726,10 +608,6 @@ function testTextBox_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testTextBox_withValue();
-testTextBox_withoutValue();
-
 // 6.6.2 Image Insertion
 function testImageInsertion(image) {
     console.log("Running testImageInsertion...");
@@ -750,10 +628,6 @@ function testImageInsertion_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testImageInsertion_withValue();
-testImageInsertion_withoutValue();
-
 // 6.6.4 Video Insertion
 function testVideoInsertion(video) {
     console.log("Running testVideoInsertion...");
@@ -774,10 +648,6 @@ function testVideoInsertion_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testVideoInsertion_withValue();
-testVideoInsertion_withoutValue();
-
 // 6.7 Create Post Page
 function testCreatePostPage(postContent) {
     console.log("Running testCreatePostPage...");
@@ -798,10 +668,6 @@ function testCreatePostPage_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testCreatePostPage_withValue();
-testCreatePostPage_withoutValue();
-
 // 6.7.1 Scroll Through Created Posts
 function testScrollThroughCreatedPosts(scrollPosition) {
     console.log("Running testScrollThroughCreatedPosts...");
@@ -822,10 +688,6 @@ function testScrollThroughCreatedPosts_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testScrollThroughCreatedPosts_withValue();
-testScrollThroughCreatedPosts_withoutValue();
-
 // 6.7.2 Delete Individual Post Button
 function testDeleteIndividualPostButton(postID) {
     console.log("Running testDeleteIndividualPostButton...");
@@ -846,10 +708,6 @@ function testDeleteIndividualPostButton_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testDeleteIndividualPostButton_withValue();
-testDeleteIndividualPostButton_withoutValue();
-
 // 6.8 Following List Page
 function testFollowingListPage(followingList) {
     console.log("Running testFollowingListPage...");
@@ -870,10 +728,6 @@ function testFollowingListPage_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testFollowingListPage_withValue();
-testFollowingListPage_withoutValue();
-
 // 6.8.1 List Population
 function testListPopulation(followingList) {
     console.log("Running testListPopulation...");
@@ -894,10 +748,6 @@ function testListPopulation_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testListPopulation_withValue();
-testListPopulation_withoutValue();
-
 // 6.8.2 List Refresh
 function testListRefresh(followingList) {
     console.log("Running testListRefresh...");
@@ -918,10 +768,6 @@ function testListRefresh_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testListRefresh_withValue();
-testListRefresh_withoutValue();
-
 // 6.8.3 Search Bar
 function testSearchBar(searchQuery) {
     console.log("Running testSearchBar...");
@@ -942,10 +788,6 @@ function testSearchBar_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testSearchBar_withValue();
-testSearchBar_withoutValue();
-
 // 6.10.1 Account Delete
 function testAccountDelete(userID) {
     console.log("Running testAccountDelete...");
@@ -966,10 +808,6 @@ function testAccountDelete_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testAccountDelete_withValue();
-testAccountDelete_withoutValue();
-
 // 7.1 iOS Download
 function testIOSDownload(downloadLink) {
     console.log("Running testIOSDownload...");
@@ -989,10 +827,6 @@ function testIOSDownload_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testIOSDownload_withValue();
-testIOSDownload_withoutValue();
-
 // Test: downloadLink is missing
 function testIOSDownload_withoutValue() {
     console.log("Test: downloadLink is missing");
@@ -1002,10 +836,6 @@ function testIOSDownload_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testIOSDownload_withValue();
-testIOSDownload_withoutValue();
-
 // 7.2 iOS Notification
 function testIOSNotification(notification) {
     console.log("Running testIOSNotification...");
@@ -1026,9 +856,6 @@ function testIOSNotification_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testIOSNotification_withValue();
-testIOSNotification_withoutValue();
 // 8.1 Android Download
 function testAndroidDownload(downloadLink) {
     console.log("Running testAndroidDownload...");
@@ -1049,10 +876,6 @@ function testAndroidDownload_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testAndroidDownload_withValue();
-testAndroidDownload_withoutValue();
-
 // 8.2 Android Notification
 function testAndroidNotification(notification) {
     console.log("Running testAndroidNotification...");
@@ -1073,6 +896,3 @@ function testAndroidNotification_withoutValue() {
         console.log("Caught expected failure:", e.message);
     }
 }
-// Run both tests
-testAndroidNotification_withValue();
-testAndroidNotification_withoutValue();
