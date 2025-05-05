@@ -26,7 +26,7 @@
         <img src="/assets/images/uc-crest.png" alt="Ursinus Logo" id="ursinusLogo">
     </div>
     <main class="login-container">   
-            <form id="logInSubmission">         
+            <form id="logInSubmission" action= "/api/auth/login" method="POST">         
                 <label for="name">Email</label>
                 <input type="text" id="email" name="email" placeholder="Email" required>
                 
