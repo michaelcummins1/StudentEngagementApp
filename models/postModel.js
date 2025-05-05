@@ -26,13 +26,14 @@ exports.createPost = async (accountID, postDate, Title, postDescription, link, i
     });
 };
 
-exports.getPostByID = (id, callback) => {
-    db.get('SELECT * FROM Post WHERE id = ?', [id], (err, row) => {
-        callback(err, row);
-    });
-};
-
-exports.getAllPosts = (callback) => {
-    db.all('SELECT postID, accountID, postDate, Title, postDescription, image, video, link FROM Post', [], callback);
+exports.getAllPosts = () => {
+    console.log("reached the model")
+    try {
+        const getPost = db.prepare('SELECT postID, accountID, postDate, Title, postDescription, image, video, link FROM posts ORDER BY postID DESC');
+        const rows = getPost.all();
+        return Promise.resolve(rows);
+      } catch (err) {
+        return Promise.reject(err);
+      }
 };
 

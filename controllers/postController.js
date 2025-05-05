@@ -29,18 +29,14 @@ exports.create = (req, res) => {
   });
   };
 
-exports.list = (req, res) => {
-    Post.getAllPosts((err, rows) => {
-        if (err) return res.status(500).json({ error: err.message });
-        res.json(rows);
-    });
-};
-
-exports.getById = (req, res) => {
-    const id = req.params.id;
-    Post.getPostByID(id, (err, post) => {
-      if (err) return res.status(500).json({ error: err.message });
-      if (!post) return res.status(404).json({ error: "Post not found" });
-      res.json(student);
-    });
+  exports.list = async (req, res) => {
+    console.log("GET /api/posts hit");
+  try {
+    const posts = await Post.getAllPosts();
+    console.log("Posts loaded:", posts.length);
+    res.json(posts);
+  } catch (err) {
+    console.error("Error in list controller:", err);
+    res.status(500).json({ error: err.message });
+  }
   };

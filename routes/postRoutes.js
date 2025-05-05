@@ -3,10 +3,8 @@ const router = express.Router();
 const postController = require('../controllers/postController');
 const { verifyAccessToken } = require('../auth/authJWT');
 
-module.exports = router;
-
 router.post('/', postController.create)
 
 router.get('/', postController.list)
 
-router.get('/:id', postController.getById);
+module.exports = router;

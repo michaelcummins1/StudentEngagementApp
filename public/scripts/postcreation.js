@@ -1,16 +1,3 @@
-async function apiFetch(url, options = {}) {
-    const token = localStorage.getItem('token');
-    console.log("using apiFetch")
-    options.headers = {
-      ...(options.headers || {}),
-      'Authorization': 'Bearer ' + token,
-      'Content-Type': 'application/json'
-    };
-}
-
-
-
-
 
 // Listener for the page upon load
 document.addEventListener("DOMContentLoaded", function () {
