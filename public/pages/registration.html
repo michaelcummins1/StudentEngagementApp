@@ -20,8 +20,12 @@
 </header>
 
 <body>
-<h1>Register</h1>
-    <main class="registration-container">
+  <!-- Header -->
+  <div class="logo_header">
+    <img src="/assets/images/uc-crest.png" alt="Ursinus Logo" id="ursinusLogo">
+    <h2>Registration</h2>
+  </div>
+    <main class="container">
         <form id="registerAccountSubmission" action= "/api/auth" method="POST">         
             <label for="email">Email</label>
             <input type="text" id="email" name="email" placeholder="Email" required>

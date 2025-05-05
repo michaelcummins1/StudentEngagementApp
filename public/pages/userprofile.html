@@ -1,10 +1,10 @@
-<!--Page to create posts (Only posters)-->
+<!--Page displaying all of the previously created posts-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Post</title>
+    <title>Created Post Page</title>
     <link rel="stylesheet" href="/styles/styles.css">  <!-- External CSS -->
     <!-- Light Mode/Theme Script -->
     <script>
@@ -23,32 +23,34 @@
     </div>
 
     <main class="container">
-        <h2>Create a New Post</h2>
+        <h2>My Profile</h2>
 
-        <form id="postForm" action="/api/posts" method="POST">
-            <input type="hidden" id="accountID" name="accountID" value="">
-            <input type="hidden" id="postDate" name="postDate" value="">
-            
-            <label for="postTitle">Title</label>
-            <input type="text" id="postTitle" name="postTitle" placeholder="Enter post title" required>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="/assets/images/blank_pfp.png" alt="Profile Picture" id="profileImage" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
+        </div>
 
-            <label for="postBody">Body</label>
-            <textarea id="postBody" name="postBody" rows="5" placeholder="Write your post..." required></textarea>
+        <button id="viewPostsBtn" type="submit">View Your Posts</button>
 
-            <label for="postImage">Image Upload</label>
-            <input type="file" id="postImage" name="postImage" accept="image/*">
+        <form id="profileForm">
+            <label for="username">Email</label>
+            <input type="text" id="username" name="username" placeholder="Your username" required>
 
-            <label for="postVideo">Video Upload</label>
-            <input type="file" id="postVideo" name="postVideo" accept="video/*">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Your First Name" required>
 
-            <label for="postLink">External Link</label>
-            <input type="url" id="postLink" name="postLink" placeholder="https://example.com">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Your Last Name" required>
 
-            <button type="submit" id="submitBtn">Submit Post</button>
+            <label for="profilePicture">Update Profile Picture</label>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+
+            <button type="submit">Update Profile</button>
         </form>
     </main>
+    
+    <!-- Footer -->
     <footer>
-        <button class="active" id="homePgBtn">
+        <button id="homePgBtn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
                 <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
                 <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
@@ -57,7 +59,7 @@
         <button id="createPstBtn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
                 <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm.53 5.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.72-1.72v5.69a.75.75 0 0 0 1.5 0v-5.69l1.72 1.72a.75.75 0 1 0 1.06-1.06l-3-3Z" clip-rule="evenodd" />
-              </svg>
+            </svg>
         </button>
         <button id="fllwLstBtn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
@@ -67,6 +69,6 @@
         </button>
     </footer>
 
-    <script type="module" src="/scripts/postcreation.js"></script> <!-- External JavaScript file -->
+    <script type="module" src="/scripts/userprofile.js"></script> <!-- External JavaScript file -->
 </body>
 </html>

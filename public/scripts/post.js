@@ -16,8 +16,8 @@ Example usage:
 post = new Post(1234, 5678, Date(2025, 11, 25, 0, 0, 0, 0), "person@ursinus.edu", "title",...);
 */
 
-export function Post(account_id_id, post_id, post_date, email, title, text, image, video, link, deleted){
-    this.account_id = account_id_id;
+export function Post(account_id, post_id, post_date, title, text, image, video, link){
+    this.account_id = account_id;
     this.post_id = post_id
     this.post_date = post_date;
     this.title = title;
@@ -25,7 +25,6 @@ export function Post(account_id_id, post_id, post_date, email, title, text, imag
     this.image = image;
     this.video = video;
     this.link = link;
-    this.deleted = deleted;
 }
 
 function getRandomDate() {

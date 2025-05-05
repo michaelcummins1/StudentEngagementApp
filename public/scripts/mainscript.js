@@ -3,7 +3,7 @@ import {Post, generateRandomPosts} from './post.js';
 
 // Listener for the page upon load
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
     const mainBtn = document.getElementById("mainBtn");
     const followingBtn = document.getElementById("followingBtn");
     const scrollView = document.getElementById("scrollView");
@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollView.innerHTML = list.map(post => `
             <div class="post">
                 <div class="post-info">
-                    <h3>${post.account_id}</h3>
                     <h3>${post.title}</h3>
                     <p>${post.text}</p>
+                    <p>${post.link}</p>
                 </div>
             </div>
         `).join("");
@@ -46,22 +46,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Begin generation/testing of filtering between posts
-    let postList = generateRandomPosts(25);
+    let postList = [];
+
+    try {
+        const res = await fetch('/api/posts');
+        if (!res.ok) throw new Error("Failed to fetch posts");
+    
+        const postData = await res.json();
+        console.log(postData);
+        
+        postList = postData.map(post => {
+            return new Post(
+                post.accountID,
+                post.postID,
+                post.postDate,
+                post.Title,
+                post.postDescription,
+                post.image,
+                post.video,
+                post.link
+            );
+          });
+
+          console.log(postList[0].text)
+        
+      } catch (err) {
+        console.error("Error fetching posts:", err);
+      }
 
     // Example of list of users that the current user follows
     let followingList = [];
     for(let i = 0; i < 25; i++){
-        if(i % 2 == 0){
+        if(i % 2 != 0){
             followingList.push(i)
         }
     }
 
     // Filters all posts in postList to a few posts and returns followingPostList
     function filterPosts(postList, followingList) {
-        return postList.filter(post => followingList.includes(post.user_id));
+        return postList.filter(post => followingList.includes(post.account_id));
     }
 
-    let followingPostList = filterPosts(postList, followingList)
+    let followingPostList = filterPosts(postList, followingList);
 
     // Event Listeners for buttons
     mainBtn.addEventListener("click", () => switchView(mainBtn, postList));
@@ -80,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "/pages/settings.html"
     });
     acctBtn.addEventListener("click", () => {
-        window.location.href = "/pages/createdposts.html"
+        window.location.href = "/pages/userprofile.html"
     });
 
     // Load default content on page load

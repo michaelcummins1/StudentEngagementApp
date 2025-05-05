@@ -1,0 +1,21 @@
+{
+    "name": "My Web App",
+    "short_name": "WebApp",
+    "start_url": "/StudentEngagementApp/public/pages/login.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1e1e1e",
+    "icons": [
+      {
+        "src": "/StudentEngagementApp/public/assets/images/uc-crest.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/StudentEngagementApp/public/assets/images/uc-crest.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
