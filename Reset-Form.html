@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reset Username & Password</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 50px;
+      background-color: #f0f0f0;
+    }
+
+    h2 {
+      color: #990000; 
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #990000;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #7a0000;
+    }
+
+    #resetContainer {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 350px;
+      height: 100%;
+      background-color: rgb(58, 35, 43);
+      box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+      padding: 30px;
+      transition: right 0.4s ease-in-out;
+      z-index: 1000;
+    }
+
+    #resetContainer.show {
+      right: 0;
+    }
+
+    #resetContainer h3 {
+      margin-top: 0;
+      color: #990000;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #1111110a;
+    }
+
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .close-btn {
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      float: right;
+      cursor: pointer;
+      color: #990000;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Login</h2>
+  <p>If you've forgotten your username or password, reset them below.</p>
+  <button onclick="showResetForm()">Forgot Username/Password?</button>
+
+  <div id="resetContainer">
+    <button class="close-btn" onclick="hideResetForm()">×</button>
+    <h3>Reset Your Credentials</h3>
+    <div class="input-group">
+      <label for="email">Enter your email address:</label>
+      <input type="email" id="email" placeholder="you@example.com" required>
+    </div>
+    <button onclick="submitReset()">Send Reset Instructions</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function showResetForm() {
+      document.getElementById("resetContainer").classList.add("show");
+    }
+
+    function hideResetForm() {
+      document.getElementById("resetContainer").classList.remove("show");
+      document.getElementById("email").value = '';
+      document.getElementById("message").textContent = '';
+    }
+
+    function submitReset() {
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message");
+
+      if (!validateEmail(email)) {
+        message.style.color = "#990000"; 
+        message.textContent = "Please enter a valid email address.";
+        return;
+      }
+
+      message.style.color = "#228B22"; 
+      message.textContent = `Reset instructions have been sent to ${email}.`;
+
+      
+      setTimeout(() => {
+        hideResetForm();
+      }, 3000);
+    }
+
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email.toLowerCase());
+    }
+  </script>
+
+</body>
+</html>
