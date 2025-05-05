@@ -2,6 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- PWA Manifest and iOS support -->
+    <link rel="manifest" href="/StudentEngagementApp/manifest.json">
+    <meta name="theme-color" content="#1e1e1e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="My Web App">
+    <link rel="apple-touch-icon" href="/StudentEngagementApp/public/assets/images/uc-crest.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
@@ -19,13 +27,19 @@
 
 
 <body>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/StudentEngagementApp/sw.js')
+          .then(() => console.log('Service Worker registered!'));
+      }
+    </script>  
     <script type="module" src="/scripts/login.js"></script> <!-- External JavaScript file --> 
 
     <!--Header (same as in post creation)-->
     <div class="postCreationHeader">
         <img src="/assets/images/uc-crest.png" alt="Ursinus Logo" id="ursinusLogo">
     </div>
-    <main class="login-container">   
+    <main class="container">   
             <form id="logInSubmission">         
                 <label for="name">Email</label>
                 <input type="text" id="email" name="email" placeholder="Email" required>

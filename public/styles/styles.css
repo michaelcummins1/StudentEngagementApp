@@ -1,11 +1,16 @@
 /*Style for the app*/
 
 :root{
-    --ursinus-red: #97002E; /*Rename to primary school color later*/
-    --darker-ursinus-red: #750020; /*Rename to darker primary school color later*/
-    --ursinus-gold: #FCB034; /*Rename to secondary school color later*/
-    --darker-ursinus-gold: #966804; /*Rename to darker secondary school color later*/
+    /* BUTTON CONFIG */
+    --button-radius: 12px; /*How smooth buttons are*/
 
+    /* SCHOOL COLORS */
+    --primary-school-color: #97002E; /* Primary school color */
+    --darker-primary-school-color: #750020; /* Darker primary school color */
+    --secondary-school-color: #FCB034; /* Secondary school color */
+    --darker-secondary-school-color: #966804; /* Darker secondary school color */
+
+    /* DARK MODE COLORS */
     --base-color: black; /*Background color*/
     --secondary-base-color: #222; /*Secondary background color*/
 
@@ -18,6 +23,7 @@
 }
 
 .light-theme{
+    /* LIGHT MODE COLORS */
     --base-color: #F2F0EF; /*Background color*/
     --secondary-base-color: #e0e0e0; /*Secondary background color*/
 
@@ -56,36 +62,34 @@ header {
 
 header button{
     background-color: var(--base-color);
-    color: var(--base-text-color);
-    padding: 5px 10px;
+    padding: 10px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 0.75em;
+    font-size: 1em;
     flex: 1;  /* Make all buttons equal width */
-    max-width: 70px; /* Prevents excessive stretching */
-    max-height: 35px;
+    width: 60px; /* Prevents excessive stretching */
+    height: 60px;
+    max-width: 60px; /* Prevents excessive stretching */
+    max-height: 60px;
     margin-top: 2%;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 8%;
+    margin-right: 8%;
     text-align: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header button:hover {
+    background-color: var(--base-color);
 }
 
 header button .icon {
-    width: 30px;
-    height: 30px;
-    fill: var(--ursinus-red);
-}
-
-header button.active {
-    background-color: var(--base-color);
-    color: var(--ursinus-red);
-    border:1px solid var(--ursinus-red);
-}
-
-header button.active .icon {
-    fill: var(--ursinus-red);
+    width: 50px;
+    height: 50px;
+    fill: var(--primary-school-color);
 }
 
 #ursinusLogo {
@@ -110,11 +114,11 @@ footer {
 
 /* Footer Buttons */
 footer button {
-    background-color: var(--ursinus-red);
+    background-color: var(--primary-school-color);
     color: var(--base-text-color);
     padding: 5px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--button-radius);
     cursor: pointer;
     font-size: 0.75em;
     flex: 1;  /* Make all buttons equal width */
@@ -124,8 +128,8 @@ footer button {
 }
 
 footer button .icon {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     fill: var(--base-color);
 }
 
@@ -156,13 +160,13 @@ footer button.active .icon {
 
 /* Style for buttons */
 .toggle-buttons button {
-    background-color: var(--ursinus-red);
+    background-color: var(--primary-school-color);
     color: var(--button-text-color);
     padding: 5px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--button-radius);
     cursor: pointer;
-    font-size: 0.75em;
+    font-size: 1em;
     width: 100%;
     min-width: 50px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -184,14 +188,16 @@ footer button.active .icon {
     overflow-y: auto; /* Enables scrolling */
     background: var(--base-color);
     padding: 10px;
-    border-radius: 8px;
 
     /* Ensure it starts below the header */
     position: absolute;
-    top: calc(12% + 25px); /* The height of the fixed header */
+    top: calc(14% + 25px); /* The height of the fixed header */
     bottom: calc(7.5% + 15px); /* Above footer */
     left: 50%;
     transform: translateX(-50%);
+    
+    border-top: 3px solid var(--secondary-school-color);
+    border-bottom: 3px solid var(--secondary-school-color);
 }
 
 .scroll-container-following {
@@ -201,34 +207,35 @@ footer button.active .icon {
     overflow-y: auto; /* Enables scrolling */
     background: var(--base-color);
     padding: 10px;
-    border-radius: 8px;
+    margin-top: 20px;
 
     /* Ensure it starts below the header */
     position: absolute;
-    top: calc(25% + 15px); /* The height of the fixed header */
+    top: calc(28% + 15px); /* The height of the fixed header */
     bottom: calc(7.5% + 15px); /* Above footer */
     left: 50%;
     transform: translateX(-50%);
+
+    border-top: 3px solid var(--secondary-school-color);
+    border-bottom: 3px solid var(--secondary-school-color);
 }
 
 .post{
     background: var(--secondary-base-color);
     display: flex;
     align-items: center;
-    gap: 10px;
     padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    margin-bottom: 10px;
+    border-radius: var(--button-radius);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* BUTTONS */
 button {
-    background-color: var(--ursinus-red);  /* Ursinus Red buttons */
+    background-color: var(--primary-school-color);  /* Ursinus Red buttons */
     color: var(--base-text-color);
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease;
@@ -236,7 +243,8 @@ button {
 }
 
 button:hover {
-    background-color: var(--darker-ursinus-red); /* Darker red for hover */
+    background-color: var(--darker-primary-school-color); /* Darker red for hover */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--secondary-school-color) 0px 0px 0px 2px;
 }
 
 .search-Bar {
@@ -245,13 +253,12 @@ button:hover {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
-    border-radius: 5px;
+    border-radius: var(--button-radius);
     overflow: hidden;
-    margin-top: calc(40% + 15px);
   }
 
 .search-Bar:focus-within {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--primary-school-color) 0px 0px 0px 2px;
 }
 .search-Bar input {
     flex: 1;
@@ -261,27 +268,24 @@ button:hover {
     font-size: 1em;
     color: var(--base-text-color);
     background-color: var(--secondary-base-color);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
 .search-Bar input::placeholder {
     color: var(--secondary-text-color);
   }
 
-.followingHeader {
-    width: 100%;
+.followingHeader{
+    width: 100%;  /* Ensures full width */
     text-align: center;
     position: fixed;
-    top: 0;
     padding: 10px;
-    height: 100px; /* Make taller to fit both items */
-    z-index: 10;
-    margin-top: 5.5%;
-    
+    height: 65px; /* Fixed height for the header */
+    line-height: 1.2; /* Ensures text is vertically aligned */
+    z-index: 10; /* Keeps header on top */
     display: flex;
-    flex-direction: column;        /* Stack children vertically */
-    align-items: center;           /* Center horizontally */
-    justify-content: center;       /* Center vertically */
-    gap: 5px;                      /* Space between image and text */
+    justify-content: center; /* Ensures equal spacing */
+    gap: 20px;
 }
 
 .postCreationHeader{
@@ -318,12 +322,12 @@ button:hover {
 
 .followed-user {
     background-color: var(--secondary-base-color);
-    margin-top: 8px;  /* Adds spacing between users */
+    margin-bottom: 8px;  /* Adds spacing between users */
     padding: 12px;
     font-size: 18px;
     display: flex;
     align-items: flex-start;
-    border-radius: 15px;  /* Slightly rounded boxes */
+    border-radius: var(--button-radius);
 }
 
 .followed-user a {
@@ -358,11 +362,10 @@ button:hover {
     color: var(--secondary-text-color);
 }
 
-/* POST CREATION */
-.post-creation-container {
+/* CONTAINER for POST CREATION, LOGIN, REGISTRATION, SETTINGS, USER PROFILE */
+.container {
     padding: 20px;
     margin: 80px auto; /* Top & bottom spacing, horizontal auto-centering */
-    border-radius: 10px;
     width: 90%;
     max-width: 500px;
 
@@ -370,7 +373,7 @@ button:hover {
     overflow-y: auto; /* Scrolls if content is too tall */
 }
 
-.post-creation-container label {
+.container label {
     display: block;
     color: var(--base-text-color);
     font-weight: bold;
@@ -379,194 +382,37 @@ button:hover {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.post-creation-container input::placeholder,
-.post-creation-container textarea::placeholder {
+.container input::placeholder,
+.container textarea::placeholder {
     color: var(--secondary-text-color);
   }
 
-.post-creation-container input[type="text"],
-.post-creation-container textarea,
-.post-creation-container input[type="url"],
-.post-creation-container input[type="file"] {
+.container input[type="text"],
+.container input[type="password"],
+.container textarea,
+.container input[type="url"],
+.container input[type="file"] {
     width: 100%;
     padding: 10px;
     background-color: var(--secondary-base-color);
     border: 1px solid var(--secondary-base-color);
     color: var(--base-text-color);
-    border-radius: 5px;
+    border-radius: var(--button-radius);
     font-size: 1em;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
 
-.post-creation-container textarea {
+.container textarea {
     resize: vertical;
     min-height: 100px;
 }
 
-.post-creation-container button[type="submit"] {
-    background-color: var(--ursinus-red);
-    color: var(--button-text-color);
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1em;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: background-color 0.3s ease;
-}
-
-.post-creation-container button[type="submit"]:hover {
-    background-color: var(--darker-ursinus-red);
-}
-
-.post-creation-container input:focus,
-.post-creation-container textarea:focus {
+.container input:focus,
+.container textarea:focus {
     outline: none;
-    border-color: var(--ursinus-red);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 1px;
-}
-
-/* Login Page */
-.login-container {
-    padding: 20px;
-    margin: 80px auto; /* Top & bottom spacing, horizontal auto-centering */
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-
-    max-height: calc(100vh - 160px); /* Viewport height minus header+footer space */
-    overflow-y: auto; /* Scrolls if content is too tall */
-}
-
-.login-container label {
-    display: block;
-    color: var(--base-text-color);
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.login-container input::placeholder,
-.login-container textarea::placeholder {
-    color: var(--secondary-text-color);
-  }
-
-.login-container input[type="text"],
-.login-container textarea,
-.login-container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--secondary-base-color);
-    border: 1px solid var(--secondary-base-color);
-    color: var(--base-text-color);
-    border-radius: 5px;
-    font-size: 1em;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-}
-
-.login-container textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.login-container button[type="submit"] {
-    background-color: var(--ursinus-red);
-    color: var(--button-text-color);
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1em;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: background-color 0.3s ease;
-}
-
-.login-container button[type="submit"]:hover {
-    background-color: var(--darker-ursinus-red);
-}
-
-.login-container input:focus,
-.login-container textarea:focus {
-    outline: none;
-    border-color: var(--ursinus-red);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 1px;
-}
-
-/* Registration Page */
-.registration-container {
-    padding: 20px;
-    margin: 80px auto; /* Top & bottom spacing, horizontal auto-centering */
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-
-    max-height: calc(100vh - 160px); /* Viewport height minus header+footer space */
-    overflow-y: auto; /* Scrolls if content is too tall */
-}
-
-.registration-container label {
-    display: block;
-    color: var(--base-text-color);
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.registration-container input::placeholder,
-.registration-container textarea::placeholder {
-    color: var(--secondary-text-color);
-  }
-
-.registration-container input[type="text"],
-.registration-container textarea,
-.registration-container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--secondary-base-color);
-    border: 1px solid var(--secondary-base-color);
-    color: var(--base-text-color);
-    border-radius: 5px;
-    font-size: 1em;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-}
-
-.registration-container textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.registration-container button[type="submit"] {
-    background-color: var(--ursinus-red);
-    color: var(--button-text-color);
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1em;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: background-color 0.3s ease;
-}
-
-.registration-container button[type="submit"]:hover {
-    background-color: var(--darker-ursinus-red);
-}
-
-.registration-container input:focus,
-.registration-container textarea:focus {
-    outline: none;
-    border-color: var(--ursinus-red);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 1px;
+    border-color: var(--primary-school-color);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--primary-school-color) 0px 0px 0px 1px;
 }
 
 /* The switch - the box around the slider */
@@ -609,11 +455,7 @@ button:hover {
   }
   
   input:checked + .slider {
-    background-color: var(--darker-ursinus-red);
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px var(--darker-ursinus-red);
+    background-color: var(--primary-school-color);
   }
   
   input:checked + .slider:before {
@@ -644,11 +486,11 @@ button:hover {
 }
 
 #deleteBtn {
-    background-color: var(--ursinus-red);
+    background-color: var(--primary-school-color);
     color: var(--base-text-color);
     padding: 5px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--button-radius);
     cursor: pointer;
     font-size: 0.75em;
     max-width: 80px; /* Prevents excessive stretching */
@@ -664,65 +506,27 @@ button:hover {
 
 #deleteBtn.active {
     background-color: var(--base-color);
-    color: var(--ursinus-red);
-    border:1px solid var(--ursinus-red);
+    color: var(--primary-school-color);
+    border:1px solid var(--primary-school-color);
 }
 
 #deleteBtn.active .icon {
-    fill: var(--ursinus-red);
+    fill: var(--primary-school-color);
 }
 
-/* USER PROFILE */
-.profile-container {
-    padding: 20px;
-    margin: 80px auto; /* Top & bottom spacing, horizontal auto-centering */
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-
-    max-height: calc(100vh - 160px); /* Viewport height minus header+footer space */
-    overflow-y: auto; /* Scrolls if content is too tall */
+.follow-actions-container {
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between button and search bar */
 }
 
-.profile-container label {
-    display: block;
-    color: var(--base-text-color);
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.profile-container input::placeholder,
-.profile-container textarea::placeholder {
-    color: var(--secondary-text-color);
-  }
-
-.profile-container input[type="text"],
-.profile-container textarea,
-.profile-container input[type="url"],
-.profile-container input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--secondary-base-color);
-    border: 1px solid var(--secondary-base-color);
-    color: var(--base-text-color);
-    border-radius: 5px;
-    font-size: 1em;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-}
-
-.profile-container textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.profile-container button[type="submit"] {
-    background-color: var(--ursinus-red);
+button[type="submit"] {
+    background-color: var(--primary-school-color);
     color: var(--button-text-color);
     border: none;
-    border-radius: 5px;
+    border-radius: var(--button-radius);
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
@@ -732,9 +536,15 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
-.profile-container input:focus,
-.profile-container textarea:focus {
-    outline: none;
-    border-color: var(--ursinus-red);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--ursinus-red) 0px 0px 0px 1px;
+button[type="findPeopleToFollow"] {
+    background-color: var(--primary-school-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: var(--button-radius);
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
 }

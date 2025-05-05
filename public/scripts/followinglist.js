@@ -2,6 +2,7 @@
 
     document.addEventListener("DOMContentLoaded", function () {
         const followingListContainer = document.getElementById("followingListContainer");
+        const followPgBtn = document.getElementById("followPgBtn");
         const homePgBtn = document.getElementById("homePgBtn");
         const createPstBtn = document.getElementById("createPstBtn");
         const fllwLstBtn = document.getElementById("fllwLstBtn");
@@ -86,6 +87,13 @@
         fllwLstBtn.addEventListener("click", () => {
             window.location.href = "/pages/followinglist.html";
         });
+
+        // Event listener for the "Find People to Follow" button
+        if (findPeopleButton) {
+            findPeopleButton.addEventListener("click", () => {
+                window.location.href = "/pages/follow.html"; // Navigate to the follow.html page
+            });
+        }
 
         // Initial rendering of followed users
         renderFollowingList();
