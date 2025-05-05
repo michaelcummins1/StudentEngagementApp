@@ -233,7 +233,7 @@ footer button.active .icon {
 /* BUTTONS */
 button {
     background-color: var(--primary-school-color);  /* Ursinus Red buttons */
-    color: var(--base-text-color);
+    color: var(--button-text-color);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -275,33 +275,7 @@ button:hover {
     color: var(--secondary-text-color);
   }
 
-.followingHeader{
-    width: 100%;  /* Ensures full width */
-    text-align: center;
-    position: fixed;
-    padding: 10px;
-    height: 65px; /* Fixed height for the header */
-    line-height: 1.2; /* Ensures text is vertically aligned */
-    z-index: 10; /* Keeps header on top */
-    display: flex;
-    justify-content: center; /* Ensures equal spacing */
-    gap: 20px;
-}
-
-.postCreationHeader{
-    width: 100%;  /* Ensures full width */
-    text-align: center;
-    position: fixed;
-    padding: 10px;
-    height: 65px; /* Fixed height for the header */
-    line-height: 1.2; /* Ensures text is vertically aligned */
-    z-index: 10; /* Keeps header on top */
-    display: flex;
-    justify-content: center; /* Ensures equal spacing */
-    gap: 20px;
-}
-
-.userProfileHeader{
+.logo_header{
     width: 100%;  /* Ensures full width */
     text-align: center;
     position: fixed;
@@ -547,4 +521,9 @@ button[type="findPeopleToFollow"] {
     font-size: 1em;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: background-color 0.3s ease;
+}
+
+hr {
+    border: 2px solid var(--secondary-school-color);
+    border-radius: var(--button-radius);
 }
