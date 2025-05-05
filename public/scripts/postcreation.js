@@ -31,19 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         targetBtn.classList.add("active");
     }
-    /*document.getElementById("postForm").addEventListener("submit", function (event) {
-    
-        const title = document.getElementById("postTitle").value;
-        console.log(title);
-        const body = document.getElementById("postBody").value;
-        const link = document.getElementById("postLink").value;
-        const image = document.getElementById("postImage").files[0];
-        const video = document.getElementById("postVideo").files[0];
-        const postDate = new Date().toDateString();
-
-        //window.location.href = "/pages/mainpage.html"
-      });*/
-
     homePgBtn.addEventListener("click", () => {
         window.location.href = "/pages/mainpage.html"
     });
