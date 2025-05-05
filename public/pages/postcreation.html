@@ -25,7 +25,10 @@
     <main class="post-creation-container">
         <h2>Create a New Post</h2>
 
-        <form id="postForm">
+        <form id="postForm" action="/api/posts" method="POST">
+            <input type="hidden" id="accountID" name="accountID" value="">
+            <input type="hidden" id="postDate" name="postDate" value="">
+            
             <label for="postTitle">Title</label>
             <input type="text" id="postTitle" name="postTitle" placeholder="Enter post title" required>
 
@@ -41,7 +44,7 @@
             <label for="postLink">External Link</label>
             <input type="url" id="postLink" name="postLink" placeholder="https://example.com">
 
-            <button type="submit">Submit Post</button>
+            <button type="submit" id="submitBtn">Submit Post</button>
         </form>
     </main>
     <footer>
