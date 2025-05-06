@@ -239,6 +239,7 @@ button {
     font-size: 1em;
     transition: background-color 0.3s ease;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: var(--button-radius);
 }
 
 button:hover {
@@ -442,6 +443,10 @@ button:hover {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--primary-school-color) 0px 0px 0px 1px;
 }
 
+.container h2, h4 {
+    text-align: center;
+}
+
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -571,4 +576,5 @@ button[type="findPeopleToFollow"] {
 hr {
     border: 2px solid var(--secondary-school-color);
     border-radius: var(--button-radius);
+    margin-top: 20px;
 }
