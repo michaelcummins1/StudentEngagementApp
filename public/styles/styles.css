@@ -364,16 +364,20 @@ button:hover {
 
 .follow-btn.following {
     background-color: var(--secondary-school-color);
+    color: var(--base-color)
 }
 .follow-btn.following:hover {
     background-color: var(--primary-school-color);
+    color: var(--button-text-color);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--secondary-school-color) 0px 0px 0px 2px;
 }
 .follow-btn.not-following {
     background-color: var(--primary-school-color);
+    color: var(--button-text-color);
 }
 .follow-btn.not-following:hover {
     background-color: var(--secondary-school-color);
+    color: var(--base-color);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--primary-school-color) 0px 0px 0px 2px;
 }
 
