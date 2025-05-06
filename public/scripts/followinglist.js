@@ -10,8 +10,7 @@
         // Search bar
         const searchBar = document.getElementById("searchBar")
 
-        // Testing/Example users
-        const followedUsers = [
+        const allUsers = [
             { username: "RussAbeJr", fullName: "Russell Abraham", profilePic: "../assets/images/blank_pfp.png" },
             { username: "MichaelCummins1", fullName: "Michael Cummins", profilePic: "../assets/images/blank_pfp.png" },
             { username: "tyhouser89", fullName: "Tyler Houser", profilePic: "../assets/images/blank_pfp.png" },
@@ -23,8 +22,20 @@
             { username: "missExample", fullName: "Miss Example", profilePic: "../assets/images/blank_pfp.png" },
             { username: "idk", fullName: "Isaiah Doesnt Know", profilePic: "../assets/images/blank_pfp.png" },
             { username: "ihaveareallyreallyreallylongnamewhywouldieverevereverdothis", fullName: "Why Did My Parents Give Me Such A Long Name", profilePic: "../assets/images/blank_pfp.png" },
-            { username: "a", fullName: "a", profilePic: "../assets/images/blank_pfp.png" }
+            { username: "hello", fullName: "HelloIAmMe", profilePic: "../assets/images/blank_pfp.png" },
+            { username: "Rando123", fullName: "randomMan1238", profilePic: "../assets/images/blank_pfp.png" },
+            { username: "abcde", fullName: "abcde", profilePic: "../assets/images/blank_pfp.png" },
+            { username: "eaglesLover408", fullName: "Eagles Lover", profilePic: "../assets/images/blank_pfp.png" },
+            { username: "username", fullName: "Full Name", profilePic: "../assets/images/blank_pfp.png" },
+            { username: "ursinusStudent12", fullName: "Mr Student12", profilePic: "../assets/images/blank_pfp.png" },
+            { username: "bobPerson", fullName: "Bob Person", profilePic: "../assets/images/blank_pfp.png" },
+            { username: "billyIII", fullName: "Billy the 3rd", profilePic: "../assets/images/blank_pfp.png" },
         ];
+        
+        const followedUsernames = JSON.parse(localStorage.getItem("followedUsers")) || [];
+        
+        const followedUsers = allUsers.filter(user => followedUsernames.includes(user.username));
+        
 
         // Function to render the followed users list
         function renderFollowingList(usersToRender = followedUsers) {
@@ -40,7 +51,7 @@
 
             // Populate list items
             ul.innerHTML = usersToRender.map(user => `
-                <li class="followed-user">
+                <li class="user-card">
                     <a href="#" class="user-link">
                         <img src="${user.profilePic}" alt="${user.fullName}" class="profile-pic">
                         <div class="user-info">

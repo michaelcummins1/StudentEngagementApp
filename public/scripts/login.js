@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const homePgBtn = document.getElementById("homePgBtn");
     const createAccountBtn = document.getElementById("createAccountBtn");
     const logInBtn = document.getElementById("logInBtn");
+    const forgotInfoBtn = document.getElementById("forgotInfoBtn");
     homePgBtn.addEventListener("click", () => {
         window.location.href = "/pages/mainpage.html";
     });
@@ -12,5 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     logInBtn.addEventListener("click", () => {
         window.location.href = "/pages/mainpage.html";
+    });
+    forgotInfoBtn.addEventListener("click", () => {
+        window.location.href = "/pages/reset_form.html";
     });
 })
