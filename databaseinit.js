@@ -56,15 +56,5 @@ db.exec(`
         FOREIGN KEY (postID) REFERENCES posts(postID)        
         );`
 );
-db.exec(`
-    CREATE TABLE IF NOT EXISTS Sessions (
-        sessionID TEXT PRIMARY KEY,
-        accountID INTEGER,
-        refreshToken TEXT NOT NULL,
-        issuedOn INTEGER,
-        expiresOn INTEGER,
-        FOREIGN KEY(accountID) REFERENCES Accounts(accountID)
-    )
-`);
 //prepared statement
 module.exports = db;
