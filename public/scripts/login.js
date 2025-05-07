@@ -42,5 +42,4 @@ document.getElementById('logInSubmission')?.addEventListener('submit', async (e)
     return fetch(url, {
       headers: { Authorization: 'Bearer ' + token }
     });
-  }
-  
+  };
