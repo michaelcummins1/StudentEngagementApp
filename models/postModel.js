@@ -5,10 +5,7 @@ exports.createPost = async (accountID, postDate, Title, postDescription, link, i
     console.log("In model function");
     new Promise((resolve, reject) => {
         try {
-            const insertPost = db.prepare(`
-                INSERT INTO posts (accountID, postDate, Title, postDescription, link, image, video)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
-            `);
+            const insertPost = db.prepare('INSERT INTO posts (accountID, postDate, Title, postDescription, link, image, video) VALUES (?, ?, ?, ?, ?, ?, ?)');
             insertPost.run(accountID, postDate, Title, postDescription, link, image, video);
 
             const result = db.prepare('SELECT last_insert_rowid() AS id').get();

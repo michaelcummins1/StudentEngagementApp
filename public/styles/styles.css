@@ -230,6 +230,10 @@ footer button.active .icon {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.post a{
+    color: var(--primary-school-color);
+}
+
 /* BUTTONS */
 button {
     background-color: var(--primary-school-color);  /* Ursinus Red buttons */

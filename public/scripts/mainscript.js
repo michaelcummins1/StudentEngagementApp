@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 <div class="post-info">
                     <h3>${post.title}</h3>
                     <p>${post.text}</p>
-                    <p>${post.link}</p>
+                    <a href=${post.link}>${post.link}</a>
                 </div>
             </div>
         `).join("");
@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (!res.ok) throw new Error("Failed to fetch posts");
     
         const postData = await res.json();
-        console.log(postData);
         
         postList = postData.map(post => {
             return new Post(
