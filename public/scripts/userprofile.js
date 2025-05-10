@@ -18,23 +18,31 @@ document.addEventListener("DOMContentLoaded", function () {
     if (userData.profilePicture) {
         document.getElementById('profileImage').src = userData.profilePicture;
     }
-
+    //Button Defs
+    const logOutBtn = document.getElementById("logOutBtn");
     const viewPostsBtn = document.getElementById("viewPostsBtn");
-
     const homePgBtn = document.getElementById("homePgBtn");
     const createPstBtn = document.getElementById("createPstBtn");
     const fllwLstBtn = document.getElementById("fllwLstBtn");
-
+    
+    //Logout
+    logOutBtn.addEventListener("click", () => {
+        localStorage.removeItem('jwt')
+        window.location.href = '/pages/login.html'
+    });
+    //Load MyPosts Page
     viewPostsBtn.addEventListener("click", () => {
         window.location.href = "/pages/createdposts.html"
     });
-
+    //Load Main Page
     homePgBtn.addEventListener("click", () => {
         window.location.href = "/pages/mainpage.html"
     });
+    //Load Post Creator
     createPstBtn.addEventListener("click", () => {
         window.location.href = "/pages/postcreation.html"
     });
+    //Load Following List
     fllwLstBtn.addEventListener("click", () => {
         window.location.href = "/pages/followinglist.html";
     });

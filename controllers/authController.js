@@ -31,10 +31,24 @@ exports.register = (req, res) => {
         // Handle form submission (HTML response)
         if (err) {
           console.log("Case 3");
-          return res.render('registration.html', {
+          return res.render('login.html', {
             message: { type: 'error', text: 'Failed to add student: ' + err.message }
           });
         }
       }
     });
   };
+
+  exports.login = (req, res) => {
+    const { email, password } = req.body;
+    Account.findByEmail(email, async (err, user) => {
+        if (err || !user) return res.status(401).json({ error: 'Invalid credentials 1' });
+        const match = await bcrypt.compare(password, user.password);
+        if (!match) return res.status(401).json({ error: 'Invalid credentials 2' });
+        const accessToken = generateAccessToken(user);
+        generateRefreshToken(user.id, (err, refreshToken) => {
+            if (err) return res.status(500).json({ error: err.message });
+            res.json({ accessToken, refreshToken });
+        });
+    });
+};

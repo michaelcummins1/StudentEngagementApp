@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     //TO DO: if statement checking to see if client has a valid token and if so straight to homepage.
     res.redirect('/pages/login.html');
 })
-//Prints Hello Gruh on a new screen.
+//Prints Hello Gruh on a new screen. Sanity Test Code.
 app.get('/api/gruh', (req, res) => {
     res.send('Hello Gruh');
 })
@@ -38,6 +38,3 @@ app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
 //Specifying a main directory that our web-app can use to get resources like images, html, css etc. from.
-
-
-console.log(process.env.TOKEN_SECRET);

@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const {v4 : uuid} = require('uuid');
+const sessions = {};
 exports.verifyJWT = function(req, res, next) {
     //Guard Case Bad Auth Header
     const authHeader = req.headers['authorization'];
@@ -31,7 +32,7 @@ exports.generateAccessToken = function(user) {
   }
   exports.generateRefreshToken = function (userId, callback) {
     try {
-      const sessionId = uuidv4();
+      const sessionId = uuid();
       const refreshToken = jwt.sign(
         { sessionId, id: userId },
         process.env.REFRESH_SECRET,
@@ -58,7 +59,7 @@ exports.generateAccessToken = function(user) {
   
       // Rotate: deactivate old, issue new
       sessions[sessionId].active = false;
-      const newSessionId = uuidv4();
+      const newSessionId = uuid();
       sessions[newSessionId] = {
         userId: payload.id,
         createdAt: new Date(),

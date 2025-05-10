@@ -20,16 +20,14 @@
 
     <div class="logo_header">
         <img src="/assets/images/uc-crest.png" alt="Ursinus Logo" id="ursinusLogo">
+        <h2>Profile</h2>
     </div>
-
     <main class="container">
-        <h2>My Profile</h2>
-
-        <div style="text-align: center; margin-bottom: 20px;">
+        <div style="text-align: center; margin-top: 25px;">
             <img src="/assets/images/blank_pfp.png" alt="Profile Picture" id="profileImage" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
         </div>
 
-        <button id="viewPostsBtn" type="submit">View Your Posts</button>
+        <button id="logOutBtn" type="logout">Log Out</button>
 
         <form id="profileForm">
             <label for="username">Email</label>
@@ -46,6 +44,8 @@
 
             <button type="submit">Update Profile</button>
         </form>
+
+        <button id="viewPostsBtn" type="submit">View My Posts</button>
     </main>
     
     <!-- Footer -->
@@ -68,7 +68,6 @@
             </svg>
         </button>
     </footer>
-
     <script type="module" src="/scripts/userprofile.js"></script> <!-- External JavaScript file -->
 </body>
 </html>

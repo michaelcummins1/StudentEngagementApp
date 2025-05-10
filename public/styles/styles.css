@@ -207,7 +207,6 @@ footer button.active .icon {
     overflow-y: auto; /* Enables scrolling */
     background: var(--base-color);
     padding: 10px;
-    margin-top: 20px;
 
     /* Ensure it starts below the header */
     position: absolute;
@@ -244,6 +243,7 @@ button {
     font-size: 1em;
     transition: background-color 0.3s ease;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: var(--button-radius);
 }
 
 button:hover {
@@ -288,8 +288,13 @@ button:hover {
     line-height: 1.2; /* Ensures text is vertically aligned */
     z-index: 10; /* Keeps header on top */
     display: flex;
-    justify-content: center; /* Ensures equal spacing */
-    gap: 20px;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;     /* Center them horizontally */
+    gap: 5px;               /* Optional spacing between logo and header */
+}
+
+.logo_header h2{
+    margin-top: 1vh;
 }
 
 #followingList {
@@ -298,7 +303,13 @@ button:hover {
     margin: 0;
 }
 
-.followed-user {
+#findPeopleList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-card {
     background-color: var(--secondary-base-color);
     margin-bottom: 8px;  /* Adds spacing between users */
     padding: 12px;
@@ -308,7 +319,7 @@ button:hover {
     border-radius: var(--button-radius);
 }
 
-.followed-user a {
+.user-card a {
     display: flex;
     align-items: flex-start;
     text-decoration: none;
@@ -338,6 +349,49 @@ button:hover {
     margin: 0;
     font-size: 14px;
     color: var(--secondary-text-color);
+}
+
+.user-link {
+    min-width: 200px;
+}
+
+.follow-btn {
+    background-color: var(--primary-school-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto; /* Pushes it to the right */
+    align-self: center; /* Vertically center it if needed */
+}
+
+.follow-btn.following {
+    background-color: var(--secondary-school-color);
+    color: var(--base-color)
+}
+.follow-btn.following:hover {
+    background-color: var(--primary-school-color);
+    color: var(--button-text-color);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--secondary-school-color) 0px 0px 0px 2px;
+}
+.follow-btn.not-following {
+    background-color: var(--primary-school-color);
+    color: var(--button-text-color);
+}
+.follow-btn.not-following:hover {
+    background-color: var(--secondary-school-color);
+    color: var(--base-color);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--primary-school-color) 0px 0px 0px 2px;
+}
+
+.follow-actions-container {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between button and search bar */
 }
 
 /* CONTAINER for POST CREATION, LOGIN, REGISTRATION, SETTINGS, USER PROFILE */
@@ -391,6 +445,10 @@ button:hover {
     outline: none;
     border-color: var(--primary-school-color);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--primary-school-color) 0px 0px 0px 1px;
+}
+
+.container h2, h4 {
+    text-align: center;
 }
 
 /* The switch - the box around the slider */
@@ -492,14 +550,6 @@ button:hover {
     fill: var(--primary-school-color);
 }
 
-.follow-actions-container {
-    margin-top: 7vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* Space between button and search bar */
-}
-
 button[type="submit"] {
     background-color: var(--primary-school-color);
     color: var(--button-text-color);
@@ -512,6 +562,28 @@ button[type="submit"] {
     font-size: 1em;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: background-color 0.3s ease;
+}
+
+button[type="logout"] {
+    background-color: var(--secondary-school-color);
+    color: var(--base-color);
+    border: none;
+    border-radius: var(--button-radius);
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 35%;
+    font-size: 1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
+
+button[type="logout"]:hover {
+    background-color: var(--darker-secondary-school-color); /* Darker red for hover */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, var(--primary-school-color) 0px 0px 0px 2px;
 }
 
 button[type="findPeopleToFollow"] {
@@ -530,4 +602,5 @@ button[type="findPeopleToFollow"] {
 hr {
     border: 2px solid var(--secondary-school-color);
     border-radius: var(--button-radius);
+    margin-top: 20px;
 }

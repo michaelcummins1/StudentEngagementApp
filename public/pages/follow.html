@@ -13,88 +13,22 @@
             }
         })();
     </script>
-    <style>
-        .not-following-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 50vh;
-            margin-top: 20px;
-        }
-
-        .scroll-container-suggestions {
-            width: 90%;
-            max-width: 400px;
-            flex: 1; /* Let it grow to fill the space */
-            overflow-y: auto; /* Enables scrolling */
-            background: var(--base-color);
-            padding: 10px;
-            margin-top: 20px;
-
-            /* Ensure it starts below the header */
-            position: absolute;
-            top: calc(28% + 15px); /* The height of the fixed header */
-            bottom: calc(7.5% + 15px); /* Above footer */
-            left: 50%;
-            transform: translateX(-50%);
-
-            border-top: 3px solid var(--secondary-school-color);
-            border-bottom: 3px solid var(--secondary-school-color);
-        }
-
-        .follow-suggestion {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .follow-suggestion:last-child {
-            border-bottom: none;
-        }
-
-        .follow-suggestion span {
-            margin-right: 10px;
-            font-size: 1.1em;
-        }
-
-        .follow-button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .follow-button:hover {
-            background-color: #0056b3;
-        }
-
-        .follow-button.following {
-            background-color: #28a745;
-            /* change to a green color */
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
     <div class="logo_header">
         <img src="/assets/images/uc-crest.png" alt="Ursinus Logo" id="ursinusLogo">
+        <h2>Suggested to Follow</h2>
     </div>
     <div class="follow-actions-container">
-        <h2>Suggested to Follow:</h2>
         
         <!--Search Bar-->
-        <form action="/search" method="GET" class="search-Bar">
-            <input id="searchBar" type="text" name="query" placeholder="Search..." />
+        <form action="/search" method="GET" class="search-Bar" style="margin-top: 20px;">
+            <input id="searchBar" type="text" name="query" placeholder="Search all users..." />
         </form>
-
-        <div class="scroll-container-suggestions" id="suggestionsContainer">
-        </div>
+        
+        <!--Scroll container-->
+        <main class="scroll-container-following" id="findPeopleContainer"></main>
     </div>
     <footer>
         <button id="homePgBtn">
@@ -115,31 +49,6 @@
             </svg>
         </button>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const homePgBtn = document.getElementById('homePgBtn');
-            const createPstBtn = document.getElementById('createPstBtn');
-            const fllwLstBtn = document.getElementById('fllwLstBtn');
-            const homeButton = document.getElementById('homeButton');
-
-            homePgBtn.addEventListener('click', () => {
-                window.location.href = '/pages/mainpage.html';
-            });
-
-            createPstBtn.addEventListener('click', () => {
-                window.location.href = '/pages/postcreation.html';
-            });
-
-            fllwLstBtn.addEventListener('click', () => {
-                window.location.href = '/pages/followinglist.html';
-            });
-            
-            if (homeButton) {
-                homeButton.addEventListener('click', () => {
-                    window.location.href = '/pages/mainpage.html';
-                });
-            }
-        });
-    </script>
+        <script src="/scripts/follow.js"></script>
 </body>
 </html>
